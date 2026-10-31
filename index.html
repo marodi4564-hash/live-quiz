@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sankalp Live — UPSC & CAPF Multiplayer Quiz Arena</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Devanagari -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- PeerJS for Serverless GitHub Pages P2P Fallback -->
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Devanagari', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#162032',
+              925: '#0b111e'
+            },
+            amber: {
+              450: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+      background-color: #0b111e;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .glass-card {
+      background: rgba(22, 32, 50, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .option-btn {
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .option-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      border-color: rgba(245, 158, 11, 0.6);
+    }
+    .pulse-ring {
+      animation: pulse-ring 2s infinite;
+    }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 9999px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-925/90 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="window.appActions.confirmLeaveToHome()">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-slate-950 font-extrabold text-xl shadow-lg shadow-amber-500/20">
+          <i class="fa-solid fa-landmark-dome"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold tracking-tight text-lg text-white">SANKALP <span class="text-amber-400">LIVE</span></span>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">UPSC • CAPF</span>
+          </div>
+          <p class="text-xs text-slate-400 hidden sm:block">Real-Time Multiplayer Quiz & PYQ Arena</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Connection Status Badge -->
+        <div id="syncModeBadge" class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800/90 border border-slate-700 text-xs text-slate-300">
+          <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-400 pulse-ring"></span>
+          <span id="syncModeText">Connecting...</span>
+        </div>
+
+        <!-- GitHub Deploy Guide Button -->
+        <button onclick="window.appActions.openModal('githubModal')" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 flex items-center gap-1.5 transition">
+          <i class="fa-brands fa-github text-sm text-amber-400"></i>
+          <span class="hidden sm:inline">GitHub Pages Guide</span>
+          <span class="sm:hidden">GitHub</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOAST NOTIFICATION BANNER -->
+  <div id="toastContainer" class="fixed top-16 right-4 z-50 flex flex-col gap-2 max-w-xs w-full pointer-events-none"></div>
+
+  <!-- MAIN APPLICATION CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6 sm:py-8">
+
+    <!-- ==========================================
+         VIEW 1: HOME / LOBBY CREATE OR JOIN
+         ========================================== -->
+    <section id="viewHome" class="space-y-6">
+      <!-- Hero Banner -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-52 h-52 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-2xl space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
+            <i class="fa-solid fa-bolt"></i> दोस्तों के साथ Live Room बनाकर UPSC PYQs हल करें
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Play Live UPSC & CAPF Quizzes Together
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Room होस्ट करें, WhatsApp पर 6-अंकों का Room Code शेयर करें, और दोस्तों के साथ रियल-टाइम टाइमर, नेगेटिव मार्किंग (-0.66) और विस्तृत व्याख्या (Explanation) के साथ मुकाबला करें।
+          </p>
+        </div>
+
+        <!-- Player Profile Bar -->
+        <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex-1 max-w-md">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
+              आपका नाम (Your Player Name) *
+            </label>
+            <div class="relative">
+              <i class="fa-solid fa-user-astronaut absolute left-3.5 top-1/2 -translate-y-1/2 text-amber-400"></i>
+              <input id="playerNameInput" type="text" maxlength="20" placeholder="अपना नाम लिखें (जैसे: राहुल, Priya)..."
+                class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-amber-400 focus:outline-none text-white font-medium text-sm" />
+            </div>
+          </div>
+          <div class="text-xs text-slate-400 space-y-0.5">
+            <div><span class="text-slate-500">Player ID:</span> <code id="displayUserId" class="text-amber-300 bg-slate-900 px-1.5 py-0.5 rounded font-mono">initializing...</code></div>
+            <div class="text-[11px] text-slate-500">100% Free • Works on Mobile & GitHub Pages</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Action Grid: Host vs Join -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- LEFT: HOST A LIVE ROOM (7 cols) -->
+        <div class="lg:col-span-7 glass-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center">
+                  <i class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                  <h2 class="text-lg font-bold text-white">नया Live Quiz Room बनाएँ (Host)</h2>
+                  <p class="text-xs text-slate-400">प्री-लोडेड UPSC पैक चुनें या अपने खुद के प्रश्न डालें</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Select Quiz Topic Pack -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
+                1. Quiz Pack चुनें (Select Quiz Topic)
+              </label>
+              <select id="quizPackSelect" onchange="window.appActions.handlePackChange()"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm font-medium focus:border-amber-400 focus:outline-none">
+                <option value="history_taxes">🏛️ भारतीय इतिहास: सभी कर (Taxes) एवं भू-राजस्व प्रणालियाँ (10 UPSC/CAPF PYQs)</option>
+                <option value="polity_core">⚖️ भारतीय राजव्यवस्था: मूल अधिकार, संसद एवं संविधान संशोधन (6 High-Yield MCQs)</option>
+                <option value="custom_json">✍️ Custom Quiz: अपने खुद के प्रश्न जोड़ें / JSON पेस्ट करें</option>
+              </select>
+            </div>
+
+            <!-- Custom Question Builder / JSON Box (Hidden unless selected) -->
+            <div id="customQuizBox" class="hidden space-y-3 p-4 rounded-xl bg-slate-900/90 border border-slate-700/80">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Custom Questions Builder</span>
+                <button type="button" onclick="window.appActions.loadSampleCustomJson()" class="text-xs text-sky-400 hover:underline">
+                  Load Sample Template
+                </button>
+              </div>
+              <p class="text-xs text-slate-400">
+                नीचे आसानी से नया प्रश्न जोड़ें या सीधे JSON फॉर्मेट पेस्ट करें:
+              </p>
+
+              <!-- Quick Single Question Adder -->
+              <div class="grid grid-cols-1 gap-2 bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                <input id="cqText" type="text" placeholder="प्रश्न लिखें (Question text)..." class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                <div class="grid grid-cols-2 gap-2">
+                  <input id="cqOpt0" type="text" placeholder="विकल्प A" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                  <input id="cqOpt1" type="text" placeholder="विकल्प B" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                  <input id="cqOpt2" type="text" placeholder="विकल्प C" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                  <input id="cqOpt3" type="text" placeholder="विकल्प D" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                </div>
+                <div class="flex items-center gap-2">
+                  <select id="cqCorrect" class="px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-amber-300">
+                    <option value="0">सही उत्तर: विकल्प A</option>
+                    <option value="1">सही उत्तर: विकल्प B</option>
+                    <option value="2">सही उत्तर: विकल्प C</option>
+                    <option value="3">सही उत्तर: विकल्प D</option>
+                  </select>
+                  <input id="cqExp" type="text" placeholder="संक्षिप्त व्याख्या (Explanation)..." class="flex-1 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+                  <button type="button" onclick="window.appActions.addCustomQuestionFromForm()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shrink-0">
+                    + Add
+                  </button>
+                </div>
+              </div>
+
+              <textarea id="customJsonInput" rows="4"
+                class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-emerald-300 focus:outline-none"
+                placeholder='[{"question":"...","options":["A","B","C","D"],"correctIndex":0,"explanation":"..."}]'></textarea>
+              <div id="customCountLabel" class="text-[11px] text-slate-400"></div>
+            </div>
+
+            <!-- Room Settings: Timer & Marking Scheme -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  2. प्रति प्रश्न समय (Timer)
+                </label>
+                <select id="timerSettingSelect" class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm">
+                  <option value="30">⏱️ 30 सेकंड (Standard UPSC)</option>
+                  <option value="45">⏱️ 45 सेकंड (Statement Questions)</option>
+                  <option value="20">⚡ 20 सेकंड (Rapid Fire)</option>
+                  <option value="60">🧘 60 सेकंड (Relaxed Discussion)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  3. मार्किंग स्कीम (Marking)
+                </label>
+                <select id="negativeMarkingSelect" class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm">
+                  <option value="upsc">🎯 UPSC Mode (+200 सही, -66 गलत, Speed Bonus)</option>
+                  <option value="none">✨ No Negative (+200 सही, 0 गलत, Speed Bonus)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 flex flex-col sm:flex-row gap-3">
+            <button id="btnCreateRoom" onclick="window.appActions.createRoom()"
+              class="flex-1 py-3 px-5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-tower-broadcast"></i>
+              <span>Create Live Room & Invite Friends</span>
+            </button>
+            <button onclick="window.appActions.startSoloPractice()"
+              class="py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-user-check text-amber-400"></i>
+              <span>Solo Practice</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: JOIN A FRIEND'S ROOM (5 cols) -->
+        <div class="lg:col-span-5 glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center">
+                <i class="fa-solid fa-right-to-bracket"></i>
+              </div>
+              <div>
+                <h2 class="text-lg font-bold text-white">दोस्त का Room Join करें</h2>
+                <p class="text-xs text-slate-400">अपने दोस्त द्वारा भेजा गया 6-अंकों का कोड डालें</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">
+                Enter 6-Digit Room Code
+              </label>
+              <input id="joinRoomCodeInput" type="text" maxlength="6" placeholder="E.g. 482910"
+                class="w-full text-center tracking-[0.35em] font-mono text-2xl font-extrabold uppercase py-3 rounded-xl bg-slate-950 border border-slate-700 focus:border-emerald-400 focus:outline-none text-emerald-300" />
+              <p class="text-[11px] text-slate-400 text-center">
+                कोड डालते ही आप सीधे Live Waiting Lobby में जुड़ जाएंगे।
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <button id="btnJoinRoom" onclick="window.appActions.joinRoom()"
+              class="w-full py-3 px-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-users-rays"></i>
+              <span>Join Live Quiz Room</span>
+            </button>
+
+            <!-- Quick Preview of Preloaded Taxes Notes -->
+            <button onclick="window.appActions.openModal('notesModal')"
+              class="w-full py-2.5 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-amber-300 flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-book-open"></i>
+              <span>त्वरित रिवीजन: भारतीय इतिहास के सभी कर (Quick Revision Notes)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 2: WAITING LOBBY
+         ========================================== -->
+    <section id="viewLobby" class="hidden space-y-6">
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="space-y-1.5">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              LIVE WAITING LOBBY
+            </div>
+            <h2 id="lobbyQuizTitle" class="text-xl sm:text-2xl font-extrabold text-white">
+              भारतीय इतिहास: सभी कर (Taxes) एवं भू-राजस्व प्रणालियाँ
+            </h2>
+            <p id="lobbyQuizMeta" class="text-xs sm:text-sm text-slate-400">
+              10 Questions • 30s per question • UPSC Marking (+200 / -66)
+            </p>
+          </div>
+
+          <!-- Room Code Card + Share Actions -->
+          <div class="w-full md:w-auto bg-slate-900/95 border border-slate-700 rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-4">
+            <div class="text-center sm:text-left">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400">ROOM CODE</div>
+              <div id="lobbyRoomCode" class="font-mono text-3xl font-extrabold tracking-widest text-amber-400">------</div>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+              <button onclick="window.appActions.copyRoomCode()"
+                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs font-bold text-white flex items-center justify-center gap-1.5 transition">
+                <i class="fa-regular fa-copy text-amber-400"></i> Copy
+              </button>
+              <button onclick="window.appActions.shareOnWhatsApp()"
+                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white flex items-center justify-center gap-1.5 transition">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Share
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Players Connected Grid -->
+        <div class="py-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+              <i class="fa-solid fa-users text-emerald-400"></i>
+              Connected Friends (<span id="lobbyPlayerCount">1</span>)
+            </h3>
+            <span class="text-xs text-slate-400">जैसे ही दोस्त कोड डालेंगे, उनके नाम यहाँ लाइव दिखेंगे</span>
+          </div>
+
+          <div id="lobbyPlayersGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <!-- Dynamically populated player cards -->
+          </div>
+        </div>
+
+        <!-- Host Controls vs Participant Waiting Banner -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button onclick="window.appActions.confirmLeaveToHome()"
+            class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> Leave Room
+          </button>
+
+          <div id="hostStartContainer" class="w-full sm:w-auto">
+            <button onclick="window.appActions.hostStartQuiz()"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-300 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-play"></i>
+              <span>Start Live Quiz Now</span>
+            </button>
+          </div>
+
+          <div id="guestWaitingContainer" class="hidden w-full sm:w-auto text-center sm:text-right">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-amber-300">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              <span>Host के क्विज़ शुरू करने की प्रतीक्षा हो रही है...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 3: LIVE QUIZ GAMEPLAY
+         ========================================== -->
+    <section id="viewQuiz" class="hidden space-y-5">
+      <!-- Top Bar: Question Progress, Room Code, Timer, Answered Status -->
+      <div class="glass-card rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span id="quizQBadge" class="px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-sm">
+            Q 1 / 10
+          </span>
+          <div>
+            <div class="text-xs text-slate-400 font-medium">Room: <span id="quizRoomCode" class="font-mono text-slate-200 font-bold">------</span></div>
+            <div id="quizAnsweredCounter" class="text-xs font-semibold text-emerald-400">
+              0 / 1 answered
+            </div>
+          </div>
+        </div>
+
+        <!-- Synchronized Countdown Timer -->
+        <div class="flex items-center gap-3">
+          <div class="text-right hidden sm:block">
+            <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Time Remaining</div>
+            <div id="timerStatusSub" class="text-xs text-slate-300">Lock your option fast!</div>
+          </div>
+          <div id="timerCircle" class="w-14 h-14 rounded-2xl bg-slate-900 border-2 border-amber-400 flex flex-col items-center justify-center shadow-inner">
+            <span id="timerSeconds" class="font-mono text-xl font-extrabold text-white leading-none">30</span>
+            <span class="text-[9px] uppercase text-slate-400 font-bold">sec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Grid: Question & Options (8 cols) + Live Room Status (4 cols) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+        <!-- Question Card -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="glass-card rounded-2xl p-5 sm:p-7 space-y-5">
+            <!-- Question Statement -->
+            <div id="questionText" class="text-base sm:text-lg font-semibold text-white leading-relaxed whitespace-pre-line">
+              Loading question...
+            </div>
+
+            <!-- Options List -->
+            <div id="optionsContainer" class="space-y-3">
+              <!-- Populated dynamically -->
+            </div>
+
+            <!-- Action Row (Skip / Lock Info) -->
+            <div class="pt-2 flex items-center justify-between text-xs text-slate-400">
+              <span id="lockFeedbackText">किसी एक विकल्प पर क्लिक करके उत्तर लॉक करें।</span>
+              <button id="btnSkipQuestion" onclick="window.appActions.submitAnswer(-1)"
+                class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold transition">
+                Skip Question (0 Marks)
+              </button>
+            </div>
+          </div>
+
+          <!-- Explanation & Reveal Box (Shown when round ends) -->
+          <div id="explanationBox" class="hidden glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-400 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-extrabold uppercase tracking-wider text-amber-400 flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb"></i> UPSC मेंटर व्याख्या (Detailed Explanation)
+              </h4>
+              <span id="roundOutcomeBadge" class="text-xs font-bold px-2.5 py-0.5 rounded-full"></span>
+            </div>
+            <p id="explanationText" class="text-sm text-slate-200 leading-relaxed whitespace-pre-line"></p>
+
+            <!-- Host Next Button -->
+            <div class="pt-3 flex items-center justify-between border-t border-slate-800/80">
+              <span id="nextStepHint" class="text-xs text-slate-400">सभी खिलाड़ियों ने अपना उत्तर देख लिया है।</span>
+              <button id="btnHostNextQ" onclick="window.appActions.hostNextQuestion()"
+                class="hidden px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-md transition">
+                <span>अगला प्रश्न (Next Question)</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Mini-Leaderboard & Player Lock Status -->
+        <div class="lg:col-span-4 glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2.5">
+              <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-ranking-star text-amber-400"></i> Live Room Standings
+              </h3>
+              <span class="text-[11px] text-slate-400">Real-Time</span>
+            </div>
+
+            <div id="liveLeaderboardList" class="space-y-2 max-h-80 overflow-y-auto pr-1">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Host Force Reveal Button (in case someone is AFK) -->
+          <div id="hostForceControls" class="hidden pt-3 border-t border-slate-800 flex flex-col gap-2">
+            <button id="btnHostReveal" onclick="window.appActions.hostRevealAnswer()"
+              class="w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-amber-300 transition">
+              <i class="fa-solid fa-eye mr-1"></i> Reveal Answer Now (Host)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 4: FINAL PODIUM & SCORECARD
+         ========================================== -->
+    <section id="viewResults" class="hidden space-y-6">
+      <div class="glass-card rounded-2xl p-6 sm:p-8 text-center space-y-6">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold">
+            <i class="fa-solid fa-trophy"></i> FINAL UPSC ROOM LEADERBOARD
+          </div>
+          <h2 id="finalQuizTitle" class="text-2xl sm:text-3xl font-extrabold text-white">Quiz Completed!</h2>
+          <p class="text-xs sm:text-sm text-slate-400">यहाँ सभी प्रतिभागियों का अंतिम स्कोर, सटीकता (Accuracy) और रैंक कार्ड दिया गया है</p>
+        </div>
+
+        <!-- Top 3 Podium Cards -->
+        <div id="podiumContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-2">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Full Detailed Standings Table -->
+        <div class="max-w-3xl mx-auto text-left bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden">
+          <div class="px-4 py-3 bg-slate-950/60 border-b border-slate-800 text-xs font-bold uppercase tracking-wider text-slate-400 flex justify-between">
+            <span>Player Rank & Name</span>
+            <span>Correct / Wrong / Score</span>
+          </div>
+          <div id="finalLeaderboardList" class="divide-y divide-slate-800/70">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
+          <button id="btnHostPlayAgain" onclick="window.appActions.hostResetLobby()"
+            class="hidden px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm flex items-center gap-2 shadow-lg transition">
+            <i class="fa-solid fa-rotate-right"></i> Play Another Round in Same Room
+          </button>
+          <button onclick="window.appActions.toggleReviewList()"
+            class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm flex items-center gap-2 transition">
+            <i class="fa-solid fa-list-check text-emerald-400"></i> Review All Questions & Explanations
+          </button>
+          <button onclick="window.appActions.confirmLeaveToHome()"
+            class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-sm flex items-center gap-2 transition">
+            <i class="fa-solid fa-house"></i> Back to Home
+          </button>
+        </div>
+
+        <!-- Expandable Full Question & Answer Review -->
+        <div id="fullReviewContainer" class="hidden text-left space-y-4 pt-6 border-t border-slate-800">
+          <h3 class="text-lg font-bold text-amber-400">सभी प्रश्नों की उत्तर कुंजी एवं व्याख्या (Complete Review)</h3>
+          <div id="fullReviewList" class="space-y-4"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 py-4 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>Sankalp Live — Built for UPSC CSE, CDS & CAPF Aspirants</span>
+      <span>Single-File Ready for <strong class="text-slate-300">GitHub Pages</strong> (Cloud + P2P WebRTC Sync)</span>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL 1: GITHUB PAGES DEPLOYMENT GUIDE
+       ========================================== -->
+  <div id="githubModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-7 border border-slate-700 space-y-5">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-brands fa-github text-2xl text-amber-400"></i>
+          <div>
+            <h3 class="text-lg font-extrabold text-white">इसे अपने GitHub Pages पर कैसे होस्ट करें?</h3>
+            <p class="text-xs text-slate-400">2 मिनट में अपना खुद का Live Quiz Link (`username.github.io/upsc-quiz`) बनाएँ</p>
+          </div>
+        </div>
+        <button onclick="window.appActions.closeModal('githubModal')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+        <div class="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-200">
+          <strong>खासियत (Zero-Backend Needed):</strong> इस ऐप में <strong>Dual Real-Time Engine</strong> लगा है! यहाँ प्रीव्यू में यह Cloud Sync का उपयोग करता है, और जब आप इसे सीधे <strong>GitHub Pages</strong> पर डालेंगे, तो यह बिना किसी सर्वर सेटअप के <strong>WebRTC (PeerJS Live Room)</strong> से आपके और आपके दोस्तों के फोन को सीधे (Real-Time) जोड़ देगा!
+        </div>
+
+        <ol class="space-y-3 list-decimal list-inside">
+          <li>
+            <strong class="text-white">Step 1: नई GitHub Repository बनाएँ</strong><br/>
+            अपने GitHub अकाउंट पर जाएँ और <code>New Repository</code> पर क्लिक करें। इसका नाम जैसे <code>upsc-live-quiz</code> रखें और इसे <strong>Public</strong> रखें।
+          </li>
+          <li>
+            <strong class="text-white">Step 2: `index.html` फाइल बनाएँ</strong><br/>
+            Repository में <code>Add file &rarr; Create new file</code> पर क्लिक करें। फाइल का नाम बिल्कुल <code>index.html</code> लिखें और इस पूरे कोड को वहाँ पेस्ट करके <strong>Commit changes</strong> कर दें।
+          </li>
+          <li>
+            <strong class="text-white">Step 3: GitHub Pages चालू करें</strong><br/>
+            अपनी Repository के <code>Settings &rarr; Pages</code> (बाईं तरफ मेन्यू में) पर जाएँ। <strong>Branch</strong> के नीचे <code>None</code> को बदलकर <code>main</code> चुनें और <strong>Save</strong> पर क्लिक करें।
+          </li>
+          <li>
+            <strong class="text-white">Step 4: आपका Live Link तैयार है! 🎉</strong><br/>
+            1 मिनट बाद आपको <code>https://your-username.github.io/upsc-live-quiz/</code> लिंक मिल जाएगा। इसे WhatsApp पर दोस्तों को भेजें, Room Code बनाएँ और साथ में टेस्ट दें!
+          </li>
+        </ol>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex justify-end">
+        <button onclick="window.appActions.closeModal('githubModal')" class="px-5 py-2 rounded-xl bg-amber-400 text-slate-950 font-bold text-xs">
+          समझ गया (Got It!)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 2: QUICK REVISION NOTES (TAXES)
+       ========================================== -->
+  <div id="notesModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-7 border border-slate-700 space-y-5">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h3 class="text-lg font-extrabold text-amber-400">📚 त्वरित रिवीजन: भारतीय इतिहास के प्रमुख कर (UPSC Cheat Sheet)</h3>
+          <p class="text-xs text-slate-400">क्विज़ शुरू करने से पहले 1 मिनट में सभी महत्वपूर्ण करों का रिवीजन करें</p>
+        </div>
+        <button onclick="window.appActions.closeModal('notesModal')" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-200">
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+          <h4 class="font-bold text-amber-300 uppercase">1. प्राचीन भारत (वैदिक, मौर्य व गुप्त काल)</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li>• <strong>बलि (Bali):</strong> ऋग्वैदिक स्वैच्छिक भेंट &rarr; उत्तर वैदिक अनिवार्य कर। लुम्बिनी में अशोक ने माफ किया।</li>
+            <li>• <strong>भाग (Bhaga):</strong> मुख्य कृषि कर (सामान्यतः उपज का 1/6; लुम्बिनी में 1/8)।</li>
+            <li>• <strong>हिरण्य (Hiranya):</strong> अनाज के बदले नकद (Cash) में लिया जाने वाला कर।</li>
+            <li>• <strong>प्रणय (Pranaya):</strong> मौर्य काल में आपातकालीन कर (Emergency Tax)।</li>
+            <li>• <strong>विष्टि (Vishti):</strong> निशुल्क/जबरन श्रम (Forced Labour)।</li>
+            <li>• <strong>उद्रंग एवं उपरिकर:</strong> गुप्त काल में स्थायी (उद्रंग) व अस्थायी (उपरिकर) किसानों पर कर।</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+          <h4 class="font-bold text-emerald-300 uppercase">2. दक्षिण भारत एवं मध्यकाल</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li>• <strong>वेत्ति (Vetti - चोल):</strong> जबरन श्रम; <strong>कदमई (Kadamai):</strong> भू-राजस्व।</li>
+            <li>• <strong>सिस्त (Sist - विजयनगर):</strong> मुख्य भूमि कर। कृष्णदेव राय ने 'विवाह कर' समाप्त किया।</li>
+            <li>• <strong>तुरुष्क दंड:</strong> गहड़वाल वंश द्वारा तुर्कों से रक्षा हेतु लगाया गया कर।</li>
+            <li>• <strong>हक-ए-शर्ब:</strong> फिरोज तुगलक का सिंचाई कर (उपज का 1/10)।</li>
+            <li>• <strong>घरी और चरी:</strong> अलाउद्दीन खिलजी द्वारा गृह कर और दुधारू पशु कर।</li>
+            <li>• <strong>चौथ (1/4) व सरदेशमुखी (1/10):</strong> मराठा कराधान प्रणाली।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-slate-800 flex justify-end">
+        <button onclick="window.appActions.closeModal('notesModal')" class="px-5 py-2 rounded-xl bg-amber-400 text-slate-950 font-bold text-xs">
+          बंद करें (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN APPLICATION & MULTIPLAYER ENGINE SCRIPT
+       ========================================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // =====================================================
+    // 1. PRE-LOADED UPSC / CAPF QUIZ PACKS
+    // =====================================================
+    const QUIZ_PACKS = {
+      history_taxes: {
+        title: "भारतीय इतिहास: कर (Taxes) एवं भू-राजस्व प्रणालियाँ (UPSC PYQs)",
+        questions: [
+          {
+            question: "सम्राट अशोक के रुम्मिनदेई स्तंभ अभिलेख (Rummindei Pillar Inscription) के संदर्भ में, बुद्ध के जन्मस्थान लुम्बिनी के लिए किए गए राजस्व प्रावधानों के बारे में कौन-सा कथन सही है?",
+            options: [
+              "ग्राम को 'बलि' कर से मुक्त कर दिया गया और 'भाग' को घटाकर उपज का 1/8 कर दिया गया।",
+              "ग्राम को सभी प्रकार के भू-राजस्व से पूर्णतः मुक्त कर दिया गया।",
+              "केवल 'हिरण्य' (नकद कर) लिया गया और 'उदकभाग' माफ कर दिया गया।",
+              "उपज का 1/4 भाग बौद्ध संघ के रखरखाव के लिए निर्धारित किया गया।"
+            ],
+            correctIndex: 0,
+            explanation: "अशोक ने अपने राज्याभिषेक के 20वें वर्ष लुम्बिनी की यात्रा की। बुद्ध का जन्मस्थान होने के कारण उसने लुम्बिनी ग्राम को धार्मिक उपकर 'बलि' (Bali) से पूर्णतः मुक्त कर दिया ('उबलिके कटे') और मुख्य भू-राजस्व 'भाग' (Bhaga) को सामान्य 1/6 से घटाकर 1/8 ('अठभागिये') कर दिया।"
+          },
+          {
+            question: "प्राचीन एवं मध्यकालीन भारत के संदर्भ में, गुप्त काल के 'विष्टि' (Vishti) और चोल काल के 'वेत्ति' (Vetti) शब्दों में क्या समानता थी?",
+            options: [
+              "दोनों बंदरगाहों पर वसूले जाने वाले समुद्री सीमा शुल्क थे।",
+              "दोनों राज्य द्वारा प्रजा से कर के रूप में वसूले जाने वाले बेगार (जबरन श्रम / Forced Labour) के प्रकार थे।",
+              "दोनों ब्राह्मणों को दी जाने वाली कर-मुक्त भूमि अनुदान की श्रेणियाँ थीं।",
+              "दोनों युद्ध के समय वसूले जाने वाले आपातकालीन सैन्य कर थे।"
+            ],
+            correctIndex: 1,
+            explanation: "उत्तर भारत (मौर्य और गुप्त काल) में 'विष्टि' और दक्षिण भारत (चोल साम्राज्य) में 'वेत्ति' (Vetti) नकद कर न होकर राज्य के लिए किए जाने वाले अनिवार्य निशुल्क श्रम (Forced Labour) के रूप थे। UPSC CSE में यह प्रश्न कई बार पूछा गया है।"
+          },
+          {
+            question: "गुप्तकालीन भू-राजस्व प्रशासन में 'उद्रंग' (Udranga) और 'उपरिकर' (Uparikara) के बीच मुख्य अंतर क्या था?",
+            options: [
+              "'उद्रंग' सिंचाई कर था, जबकि 'उपरिकर' चरागाह कर था।",
+              "'उद्रंग' स्थायी किसानों (Permanent Tenants) पर लगने वाला भूमिकर था, जबकि 'उपरिकर' अस्थायी किसानों से वसूला जाता था।",
+              "'उद्रंग' केवल नकद में लिया जाता था, जबकि 'उपरिकर' केवल अनाज के रूप में।",
+              "'उद्रंग' व्यापारिक श्रेणियों पर कर था, जबकि 'उपरिकर' शिल्पकारों पर।"
+            ],
+            correctIndex: 1,
+            explanation: "गुप्त अभिलेखों में भूमि कर के रूप में 'उद्रंग' और 'उपरिकर' का उल्लेख मिलता है। इतिहासकार फ्लीट और डॉ. घोसाल के अनुसार 'उद्रंग' स्थायी काश्तकारों पर और 'उपरिकर' अस्थायी काश्तकारों पर लगने वाला कर था।"
+          },
+          {
+            question: "दिल्ली सल्तनत की कराधान प्रणाली के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. अलाउद्दीन खिलजी ने 'खुम्स' (युद्ध में लूटे गए धन) में राज्य का हिस्सा 1/5 से बढ़ाकर 4/5 कर दिया था।\n2. फिरोज शाह तुगलक ने राजकीय नहरों से सिंचाई करने वाले किसानों पर उपज का 1/10 भाग 'हक-ए-शर्ब' (Haqq-i-Sharb) के रूप में लगाया।\n\nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+            options: [
+              "केवल 1 सही है",
+              "केवल 2 सही है",
+              "1 और 2 दोनों सही हैं",
+              "न तो 1 और न ही 2"
+            ],
+            correctIndex: 2,
+            explanation: "शरीयत के अनुसार 'खुम्स' में 1/5 भाग राज्य का और 4/5 भाग सैनिकों का होता था, परंतु अलाउद्दीन खिलजी और मुहम्मद बिन तुगलक ने 4/5 भाग राजकोष के लिए रखा। वहीं फिरोज शाह तुगलक ने उलेमाओं की अनुमति से 10% (1/10) सिंचाई कर 'हक-ए-शर्ब' लगाया।"
+          },
+          {
+            question: "मध्यकालीन भारत में 'जजिया' (Jizya) कर के ऐतिहासिक विकास के संदर्भ में कौन-सा कथन सही नहीं है?",
+            options: [
+              "भारत में जजिया कर लगाने का प्रथम साक्ष्य मुहम्मद बिन कासिम के सिंध आक्रमण के समय मिलता है।",
+              "फिरोज शाह तुगलक ने पहली बार ब्राह्मणों पर भी जजिया कर लगाया था।",
+              "अकबर ने 1564 ई. में जजिया कर को समाप्त कर दिया था।",
+              "औरंगजेब ने अपने राज्याभिषेक के तुरंत बाद 1658 ई. में जजिया कर पुनः लागू कर दिया था।"
+            ],
+            correctIndex: 3,
+            explanation: "कथन D गलत है क्योंकि औरंगजेब ने अपने राज्याभिषेक (1658) के तुरंत बाद नहीं, बल्कि शासन के 22वें वर्ष यानी 1679 ई. में जजिया कर को पुनः लागू किया था।"
+          },
+          {
+            question: "अकबर के शासनकाल में राजा टोडरमल द्वारा 1580 ई. में लागू की गई 'दहसाला प्रणाली' (आइन-ए-दहसाला) की मुख्य विशेषता क्या थी?",
+            options: [
+              "हर 10 वर्ष में जमींदारों की भूमि की नीलामी करना।",
+              "पिछले 10 वर्षों के औसत उत्पादन और प्रचलित कीमतों के आधार पर उपज का 1/3 भाग राजस्व निर्धारित करना।",
+              "किसानों को 10 वर्षों के लिए कर-मुक्त ऋण (तकावी) प्रदान करना।",
+              "केवल बंजर भूमि (चाचर और बंजर) पर 10% की दर से कर लगाना।"
+            ],
+            correctIndex: 1,
+            explanation: "राजा टोडरमल की 'दहसाला' (या जब्ती) प्रणाली में पिछले 10 वर्षों (1570-1580) के विभिन्न फसलों के औसत उत्पादन और औसत कीमतों की गणना करके राज्य का हिस्सा एक-तिहाई (1/3) नकद दरों (दस्तूर-उल-अमल) में तय किया गया था।"
+          },
+          {
+            question: "मराठा प्रशासन के अंतर्गत वसूले जाने वाले 'चौथ' (Chauth) और 'सरदेशमुखी' (Sardeshmukhi) करों के संबंध में कौन-सा युग्म सही है?",
+            options: [
+              "चौथ: मराठा आक्रमण से सुरक्षा के बदले 1/4 भाग; सरदेशमुखी: पुश्तैनी प्रमुख (सरदेशमुख) होने के अधिकार से 1/10 भाग।",
+              "चौथ: मंदिरों के रखरखाव के लिए 1/4 भाग; सरदेशमुखी: सिंचाई कर के रूप में 1/10 भाग।",
+              "चौथ: मराठा साम्राज्य के आंतरिक किसानों पर कर; सरदेशमुखी: केवल विदेशी व्यापारियों पर कर।",
+              "चौथ: उपज का 1/10 भाग; सरदेशमुखी: उपज का 1/4 भाग।"
+            ],
+            correctIndex: 0,
+            explanation: "'चौथ' पड़ोसी राज्यों की आय का 1/4 (25%) हिस्सा था जो मराठा आक्रमण से बचने के बदले वसूला जाता था, जबकि 'सरदेशमुखी' 1/10 (10%) अतिरिक्त लेवी थी जिसे छत्रपति शिवाजी महाराज महाराष्ट्र के पुश्तैनी 'सरदेशमुख' होने के कानूनी अधिकार से वसूलते थे।"
+          },
+          {
+            question: "1793 ई. में लॉर्ड कॉर्नवालिस द्वारा लागू 'स्थायी बंदोबस्त' (Permanent Settlement) के संदर्भ में कौन-सा कथन सही है?",
+            options: [
+              "यह संपूर्ण ब्रिटिश भारत के 51% भू-भाग पर लागू किया गया था।",
+              "जमींदारों को वसूले गए भू-राजस्व का 1/11 भाग अपने पास रखने और 10/11 भाग कंपनी को देने का प्रावधान था।",
+              "'सूर्यास्त कानून' (Sunset Law) के तहत अकाल पड़ने पर जमींदारों का लगान स्वतः माफ हो जाता था।",
+              "इसमें किसानों (रैयतों) को भूमि का स्थायी स्वामी घोषित किया गया था।"
+            ],
+            correctIndex: 1,
+            explanation: "स्थायी बंदोबस्त (बंगाल, बिहार, उड़ीसा - ब्रिटिश भारत का 19% क्षेत्र) में जमींदारों को भूमि का मालिक माना गया। उन्हें वसूले गए लगान का 10/11 भाग कंपनी को देना होता था और 1/11 भाग उनकी सेवा के बदले मिलता था।"
+          },
+          {
+            question: "ब्रिटिश काल में थॉमस मुनरो और कैप्टन रीड द्वारा प्रारंभ की गई 'रैयतवाड़ी व्यवस्था' (Ryotwari System) के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. इसमें सरकार और किसान (रैयत) के बीच कोई बिचौलिया या जमींदार नहीं होता था।\n2. इस व्यवस्था के अंतर्गत भूमि का सर्वेक्षण और मूल्यांकन किए बिना ही एकमुश्त लगान तय कर दिया जाता था।\n\nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+            options: [
+              "केवल 1 सही है",
+              "केवल 2 सही है",
+              "1 और 2 दोनों सही हैं",
+              "न तो 1 और न ही 2"
+            ],
+            correctIndex: 0,
+            explanation: "कथन 1 सही है: रैयतवाड़ी व्यवस्था (मद्रास, बंबई, असम - 51% क्षेत्र) में सीधा किसानों (रैयतों) से समझौता किया गया था। कथन 2 गलत है क्योंकि इसमें कर निर्धारण से पूर्व भूमि का विस्तृत सर्वेक्षण और वर्गीकरण किया जाता था।"
+          },
+          {
+            question: "भारतीय इतिहास के विभिन्न कालखंडों के करों और उनके सही अर्थ वाले निम्नलिखित युग्मों पर विचार कीजिए:\n1. तुरुष्क दंड — गहड़वाल वंश द्वारा तुर्कों से रक्षा हेतु लगाया गया कर\n2. सिस्त (Sist) — विजयनगर साम्राज्य में वसूला जाने वाला मुख्य भू-राजस्व\n3. अबवाब (Abwab) — मुगल काल में मुख्य भू-राजस्व के अतिरिक्त लगाए जाने वाले स्थानीय उपकर (Cesses)\n\nउपर्युक्त में से कौन-से युग्म सही सुमेलित हैं?",
+            options: [
+              "केवल 1 और 2",
+              "केवल 2 और 3",
+              "केवल 1 और 3",
+              "1, 2 और 3 तीनों सुमेलित हैं"
+            ],
+            correctIndex: 3,
+            explanation: "तीनों युग्म बिल्कुल सही सुमेलित हैं। 'तुरुष्क दंड' उत्तर भारत के गहड़वाल शासकों द्वारा, 'सिस्त' विजयनगर साम्राज्य के 'अठवण' (राजस्व विभाग) द्वारा, और 'अबवाब' मुगल व बंगाल सूबे में अतिरिक्त उपकर के रूप में वसूले जाते थे।"
+          }
+        ]
+      },
+      polity_core: {
+        title: "भारतीय राजव्यवस्था: मूल अधिकार, संसद एवं संविधान संशोधन (UPSC Core)",
+        questions: [
+          {
+            question: "भारतीय संविधान के अंतर्गत निम्नलिखित में से कौन-से मूल अधिकार केवल भारतीय नागरिकों को प्राप्त हैं (विदेशियों को नहीं)?\n1. अनुच्छेद 15 (धर्म, मूलवंश, जाति, लिंग या जन्मस्थान के आधार पर विभेद का प्रतिषेध)\n2. अनुच्छेद 19 (वाक्-स्वातंत्र्य आदि विषयक कुछ अधिकारों का संरक्षण)\n3. अनुच्छेद 21 (प्राण और दैहिक स्वतंत्रता का संरक्षण)\n\nसही उत्तर चुनिए:",
+            options: [
+              "केवल 1 और 2",
+              "केवल 2 और 3",
+              "केवल 1 और 3",
+              "1, 2 और 3"
+            ],
+            correctIndex: 0,
+            explanation: "भारतीय संविधान के अनुच्छेद 15, 16, 19, 29 और 30 केवल भारतीय नागरिकों को प्राप्त हैं। अनुच्छेद 14, 20, 21, 21A, 22, 23, 24, 25, 26, 27 और 28 नागरिकों तथा विदेशियों दोनों को प्राप्त हैं।"
+          },
+          {
+            question: "धन विधेयक (Money Bill - अनुच्छेद 110) के संबंध में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+            options: [
+              "इसे केवल लोकसभा में और राष्ट्रपति की पूर्व सिफारिश से ही पुरःस्थापित (Introduce) किया जा सकता है।",
+              "राज्यसभा धन विधेयक को अधिकतम 14 दिनों तक रोक सकती है।",
+              "धन विधेयक पर दोनों सदनों में गतिरोध होने पर राष्ट्रपति अनुच्छेद 108 के तहत संयुक्त बैठक (Joint Sitting) बुला सकते हैं।",
+              "कोई विधेयक धन विधेयक है या नहीं, इस पर लोकसभा अध्यक्ष (Speaker) का निर्णय अंतिम होता है।"
+            ],
+            correctIndex: 2,
+            explanation: "धन विधेयक और संविधान संशोधन विधेयक के मामले में संयुक्त बैठक (Joint Sitting) का कोई प्रावधान नहीं है क्योंकि धन विधेयक में लोकसभा को अनन्य शक्ति प्राप्त है।"
+          },
+          {
+            question: "भारतीय संविधान की 'मूल संरचना' (Basic Structure Doctrine) का सिद्धांत सर्वोच्च न्यायालय ने किस ऐतिहासिक वाद में प्रतिपादित किया था?",
+            options: [
+              "शंकरी प्रसाद वाद (1951)",
+              "गोलकनाथ वाद (1967)",
+              "केशवानंद भारती वाद (1973)",
+              "मिनर्वा मिल्स वाद (1980)"
+            ],
+            correctIndex: 2,
+            explanation: "24 अप्रैल 1973 को 'केशवानंद भारती बनाम केरल राज्य' मामले में 13 न्यायाधीशों की संविधान पीठ ने 7:6 के बहुमत से निर्णय दिया कि संसद अनुच्छेद 368 के तहत संविधान के किसी भी भाग में संशोधन कर सकती है, किंतु उसके 'मूल ढाँचे' को नष्ट नहीं कर सकती।"
+          },
+          {
+            question: "संसद की 'लोक लेखा समिति' (Public Accounts Committee - PAC) के संदर्भ में कौन-सा कथन सही है?",
+            options: [
+              "इसमें कुल 30 सदस्य होते हैं जो सभी लोकसभा से चुने जाते हैं।",
+              "इसमें 22 सदस्य (15 लोकसभा + 7 राज्यसभा) होते हैं और कोई भी मंत्री इसका सदस्य नहीं हो सकता।",
+              "इसका कार्यकाल 5 वर्ष का होता है और वित्त मंत्री इसके पदेन अध्यक्ष होते हैं।",
+              "यह अपनी रिपोर्ट सीधे राष्ट्रपति को सौंपती है।"
+            ],
+            correctIndex: 1,
+            explanation: "लोक लेखा समिति (PAC) में 22 सदस्य (15 लोकसभा और 7 राज्यसभा से) होते हैं। इसका कार्यकाल 1 वर्ष होता है, कोई भी मंत्री इसका सदस्य नहीं बन सकता, और यह अपनी रिपोर्ट लोकसभा अध्यक्ष को सौंपती है।"
+          },
+          {
+            question: "भारत के राष्ट्रपति के महाभियोग (Impeachment - अनुच्छेद 61) में निम्नलिखित में से कौन भाग लेते हैं?",
+            options: [
+              "संसद के दोनों सदनों के केवल निर्वाचित सदस्य",
+              "संसद के दोनों सदनों के सभी सदस्य (निर्वाचित एवं मनोनीत दोनों)",
+              "संसद के दोनों सदनों तथा सभी राज्य विधानसभाओं के निर्वाचित सदस्य",
+              "केवल लोकसभा के सदस्य"
+            ],
+            correctIndex: 1,
+            explanation: "राष्ट्रपति के चुनाव में मनोनीत सदस्य भाग नहीं लेते, किंतु अनुच्छेद 61 के तहत महाभियोग की प्रक्रिया में संसद के दोनों सदनों (लोकसभा और राज्यसभा) के सभी सदस्य (निर्वाचित और मनोनीत दोनों) भाग लेते हैं। राज्य विधानसभाएँ महाभियोग में भाग नहीं लेतीं।"
+          },
+          {
+            question: "निम्नलिखित में से किस संविधान संशोधन द्वारा 'संपत्ति के अधिकार' (Right to Property) को मूल अधिकारों की सूची से हटाकर अनुच्छेद 300A के तहत विधिक/संवैधानिक अधिकार बना दिया गया?",
+            options: [
+              "42वाँ संविधान संशोधन अधिनियम, 1976",
+              "44वाँ संविधान संशोधन अधिनियम, 1978",
+              "52वाँ संविधान संशोधन अधिनियम, 1985",
+              "86वाँ संविधान संशोधन अधिनियम, 2002"
+            ],
+            correctIndex: 1,
+            explanation: "मोरारजी देसाई सरकार के समय 44वें संविधान संशोधन अधिनियम, 1978 द्वारा अनुच्छेद 19(1)(f) और अनुच्छेद 31 को मूल अधिकारों से निरसित कर संपत्ति के अधिकार को भाग XII के अनुच्छेद 300A में एक विधिक अधिकार बना दिया गया।"
+          }
+        ]
+      }
+    };
+
+    // =====================================================
+    // 2. STATE & MULTIPLAYER ENGINE VARIABLES
+    // =====================================================
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'upsc-live-quiz-app';
+    let db = null;
+    let auth = null;
+    let currentUser = null;
+    let myUserId = 'user-' + Math.random().toString(36).substring(2, 9);
+    let syncEngine = 'initializing'; // 'firestore' | 'peerjs' | 'local'
+
+    // Active Room State
+    let currentRoomCode = null;
+    let isHost = false;
+    let roomUnsubscribe = null;
+    let roomData = null;
+    let localTimerInterval = null;
+
+    // PeerJS P2P variables (for serverless GitHub Pages deployment)
+    let peerInstance = null;
+    let hostConnections = []; // used by host to broadcast roomData
+    let guestConnection = null; // used by guest to send actions to host
+
+    // =====================================================
+    // 3. INITIALIZE CLOUD / P2P MULTIPLAYER SYNC
+    // =====================================================
+    async function initAppEngine() {
+      // Restore saved player name in memory/session if typed
+      const nameInput = document.getElementById('playerNameInput');
+      const randomNames = ['Aarav (IAS)', 'Priya (IPS)', 'Jeegar', 'Sahil', 'Ananya', 'Vikram'];
+      if (!nameInput.value) {
+        nameInput.value = randomNames[Math.floor(Math.random() * randomNames.length)];
+      }
+
+      // Check if environment provides Firebase Config
+      try {
+        if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+          const firebaseConfig = JSON.parse(__firebase_config);
+          const app = initializeApp(firebaseConfig);
+          auth = getAuth(app);
+          db = getFirestore(app);
+
+          // RULE 3: Auth Before Queries
+          if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+            await signInWithCustomToken(auth, __initial_auth_token);
+          } else {
+            await signInAnonymously(auth);
+          }
+
+          onAuthStateChanged(auth, (user) => {
+            if (user) {
+              currentUser = user;
+              myUserId = user.uid;
+              document.getElementById('displayUserId').textContent = myUserId;
+              syncEngine = 'firestore';
+              updateSyncBadge('Cloud Live Sync Active', 'emerald');
+            }
+          });
+          return;
+        }
+      } catch (err) {
+        console.warn("Cloud init fallback to PeerJS P2P mode:", err);
+      }
+
+      // Fallback for GitHub Pages standalone deployment: PeerJS WebRTC P2P
+      syncEngine = 'peerjs';
+      document.getElementById('displayUserId').textContent = myUserId;
+      updateSyncBadge('GitHub P2P Live Mode Ready', 'amber');
+    }
+
+    function updateSyncBadge(text, color) {
+      const badgeText = document.getElementById('syncModeText');
+      const dot = document.getElementById('syncDot');
+      if (badgeText) badgeText.textContent = text;
+      if (dot) {
+        dot.className = `w-2 h-2 rounded-full bg-${color}-400 pulse-ring`;
+      }
+    }
+
+    // =====================================================
+    // 4. UI HELPERS & TOAST NOTIFICATIONS
+    // =====================================================
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      const colors = {
+        info: 'border-amber-500/50 bg-slate-900/95 text-amber-300',
+        success: 'border-emerald-500/50 bg-slate-900/95 text-emerald-300',
+        error: 'border-rose-500/50 bg-slate-900/95 text-rose-300'
+      };
+      toast.className = `pointer-events-auto px-4 py-3 rounded-xl border shadow-xl text-xs font-semibold flex items-center gap-2 transition-all duration-300 ${colors[type] || colors.info}`;
+      toast.innerHTML = `<i class="fa-solid fa-circle-info"></i><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    function switchView(viewId) {
+      ['viewHome', 'viewLobby', 'viewQuiz', 'viewResults'].forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById(viewId).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function getPlayerName() {
+      const val = document.getElementById('playerNameInput').value.trim();
+      if (!val) {
+        showToast('कृपया पहले अपना नाम (Player Name) लिखें!', 'error');
+        document.getElementById('playerNameInput').focus();
+        return null;
+      }
+      return val;
+    }
+
+    function getSelectedQuestions() {
+      const packKey = document.getElementById('quizPackSelect').value;
+      if (packKey === 'custom_json') {
+        try {
+          const raw = document.getElementById('customJsonInput').value.trim();
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed) || parsed.length === 0) throw new Error("Empty array");
+          return {
+            title: "Custom UPSC / CAPF Live Quiz",
+            questions: parsed
+          };
+        } catch (e) {
+          showToast('कृपया सही Custom JSON प्रश्न जोड़ें या प्री-लोडेड पैक चुनें!', 'error');
+          return null;
+        }
+      }
+      return QUIZ_PACKS[packKey];
+    }
+
+    // =====================================================
+    // 5. ROOM CREATION, JOINING & REALTIME SYNCHRONIZATION
+    // =====================================================
+    async function createRoom(isSolo = false) {
+      const playerName = getPlayerName();
+      if (!playerName) return;
+
+      const selectedPack = getSelectedQuestions();
+      if (!selectedPack) return;
+
+      const timerSec = parseInt(document.getElementById('timerSettingSelect').value, 10) || 30;
+      const markingMode = document.getElementById('negativeMarkingSelect').value;
+      const roomCode = Math.floor(100000 + Math.random() * 900000).toString();
+
+      const initialRoomState = {
+        roomCode,
+        hostId: myUserId,
+        hostName: playerName,
+        title: selectedPack.title,
+        timerSeconds: timerSec,
+        markingMode, // 'upsc' or 'none'
+        status: isSolo ? 'playing' : 'waiting', // 'waiting' | 'playing' | 'revealed' | 'finished'
+        currentQuestionIndex: 0,
+        questionStartTime: Date.now(),
+        questionsJson: JSON.stringify(selectedPack.questions),
+        playersJson: JSON.stringify({
+          [myUserId]: {
+            id: myUserId,
+            name: playerName,
+            isHost: true,
+            score: 0,
+            correctCount: 0,
+            wrongCount: 0,
+            skippedCount: 0,
+            currentAnswer: null, // null = not answered yet, -1 = skipped, 0..3 = option index
+            answeredAt: null
+          }
+        }),
+        updatedAt: Date.now()
+      };
+
+      isHost = true;
+      currentRoomCode = roomCode;
+
+      if (isSolo) {
+        // Run immediately in local fast mode or cloud
+        roomData = initialRoomState;
+        handleRoomStateUpdate(roomData);
+        showToast('Solo Practice शुरू हो गया है!', 'success');
+        return;
+      }
+
+      if (syncEngine === 'firestore' && currentUser) {
+        try {
+          const roomRef = doc(db, 'artifacts', appId, 'public', 'data', 'quiz_rooms', roomCode);
+          await setDoc(roomRef, initialRoomState);
+          subscribeToFirestoreRoom(roomCode);
+          showToast(`Room ${roomCode} तैयार है! दोस्तों के साथ कोड शेयर करें।`, 'success');
+        } catch (err) {
+          console.error("Firestore create error:", err);
+          showToast("Cloud रूम बनाने में समस्या, P2P मोड सक्रिय किया जा रहा है...", 'info');
+          initPeerHost(roomCode, initialRoomState);
+        }
+      } else {
+        initPeerHost(roomCode, initialRoomState);
+      }
+    }
+
+    async function joinRoom() {
+      const playerName = getPlayerName();
+      if (!playerName) return;
+
+      const codeInput = document.getElementById('joinRoomCodeInput').value.trim();
+      if (!/^\d{6}$/.test(codeInput)) {
+        showToast('कृपया सही 6-अंकों का Room Code डालें (जैसे: 482910)', 'error');
+        return;
+      }
+
+      isHost = false;
+      currentRoomCode = codeInput;
+
+      if (syncEngine === 'firestore' && currentUser) {
+        try {
+          const roomRef = doc(db, 'artifacts', appId, 'public', 'data', 'quiz_rooms', codeInput);
+          const snap = await getDoc(roomRef);
+          if (!snap.exists()) {
+            showToast(`Room Code ${codeInput} नहीं मिला! कृपया कोड जाँचें।`, 'error');
+            return;
+          }
+          const data = snap.data();
+          const players = JSON.parse(data.playersJson || '{}');
+          if (!players[myUserId]) {
+            players[myUserId] = {
+              id: myUserId,
+              name: playerName,
+              isHost: false,
+              score: 0,
+              correctCount: 0,
+              wrongCount: 0,
+              skippedCount: 0,
+              currentAnswer: null,
+              answeredAt: null
+            };
+          } else {
+            players[myUserId].name = playerName;
+          }
+          await updateDoc(roomRef, {
+            playersJson: JSON.stringify(players),
+            updatedAt: Date.now()
+          });
+          subscribeToFirestoreRoom(codeInput);
+          showToast(`आप Room ${codeInput} में जुड़ गए हैं!`, 'success');
+        } catch (err) {
+          console.error("Join room error:", err);
+          showToast('रूम से जुड़ने में त्रुटि हुई।', 'error');
+        }
+      } else {
+        initPeerGuest(codeInput, playerName);
+      }
+    }
+
+    // Firestore Real-time Listener (Follows RULE 1, 2, 3 + Error Callback)
+    function subscribeToFirestoreRoom(roomCode) {
+      if (!currentUser) return;
+      if (roomUnsubscribe) roomUnsubscribe();
+
+      const roomRef = doc(db, 'artifacts', appId, 'public', 'data', 'quiz_rooms', roomCode);
+      roomUnsubscribe = onSnapshot(
+        roomRef,
+        (docSnap) => {
+          if (!docSnap.exists()) return;
+          roomData = docSnap.data();
+          handleRoomStateUpdate(roomData);
+        },
+        (err) => {
+          console.error("Room snapshot error:", err);
+          showToast("सिंक कनेक्शन में रुकावट आई।", "error");
+        }
+      );
+    }
+
+    // PeerJS P2P Fallback for Standalone GitHub Pages
+    function initPeerHost(roomCode, initialState) {
+      roomData = initialState;
+      handleRoomStateUpdate(roomData);
+      if (typeof Peer === 'undefined') return;
+
+      if (peerInstance) peerInstance.destroy();
+      peerInstance = new Peer(`sankalp-upsc-room-${roomCode}`);
+      hostConnections = [];
+
+      peerInstance.on('open', () => {
+        showToast(`P2P Live Room ${roomCode} तैयार है!`, 'success');
+      });
+
+      peerInstance.on('connection', (conn) => {
+        hostConnections.push(conn);
+        conn.on('data', (msg) => {
+          if (msg.type === 'JOIN') {
+            const players = JSON.parse(roomData.playersJson || '{}');
+            players[msg.player.id] = msg.player;
+            roomData.playersJson = JSON.stringify(players);
+            broadcastPeerState();
+          } else if (msg.type === 'SUBMIT_ANSWER') {
+            applyPlayerAnswer(msg.playerId, msg.optionIndex);
+          }
+        });
+        conn.on('open', () => {
+          conn.send({ type: 'STATE_UPDATE', roomData });
+        });
+      });
+    }
+
+    function initPeerGuest(roomCode, playerName) {
+      if (typeof Peer === 'undefined') {
+        showToast('P2P इंजन लोड नहीं हो सका।', 'error');
+        return;
+      }
+      if (peerInstance) peerInstance.destroy();
+      peerInstance = new Peer();
+
+      peerInstance.on('open', () => {
+        guestConnection = peerInstance.connect(`sankalp-upsc-room-${roomCode}`);
+        guestConnection.on('open', () => {
+          guestConnection.send({
+            type: 'JOIN',
+            player: {
+              id: myUserId,
+              name: playerName,
+              isHost: false,
+              score: 0,
+              correctCount: 0,
+              wrongCount: 0,
+              skippedCount: 0,
+              currentAnswer: null,
+              answeredAt: null
+            }
+          });
+          showToast(`Room ${roomCode} से जुड़ गए!`, 'success');
+        });
+        guestConnection.on('data', (msg) => {
+          if (msg.type === 'STATE_UPDATE') {
+            roomData = msg.roomData;
+            handleRoomStateUpdate(roomData);
+          }
+        });
+      });
+    }
+
+    function broadcastPeerState() {
+      handleRoomStateUpdate(roomData);
+      hostConnections.forEach(conn => {
+        if (conn.open) conn.send({ type: 'STATE_UPDATE', roomData });
+      });
+    }
+
+    async function pushRoomUpdate(partialUpdate) {
+      if (!roomData) return;
+      Object.assign(roomData, partialUpdate, { updatedAt: Date.now() });
+
+      if (syncEngine === 'firestore' && currentUser && roomUnsubscribe) {
+        try {
+          const roomRef = doc(db, 'artifacts', appId, 'public', 'data', 'quiz_rooms', currentRoomCode);
+          await updateDoc(roomRef, partialUpdate);
+        } catch (e) {
+          console.error("Failed to push update:", e);
+        }
+      } else if (isHost) {
+        broadcastPeerState();
+      } else {
+        handleRoomStateUpdate(roomData);
+      }
+    }
+
+    // =====================================================
+    // 6. STATE RENDERER (LOBBY, QUIZ, REVEAL, PODIUM)
+    // =====================================================
+    let lastRenderedQuestionIdx = -1;
+    let lastRenderedStatus = null;
+
+    function handleRoomStateUpdate(data) {
+      if (!data) return;
+      const playersObj = JSON.parse(data.playersJson || '{}');
+      const playersList = Object.values(playersObj);
+      const questions = JSON.parse(data.questionsJson || '[]');
+
+      // Check if current user is host
+      isHost = (data.hostId === myUserId);
+
+      // 1. WAITING LOBBY STATE
+      if (data.status === 'waiting') {
+        clearInterval(localTimerInterval);
+        switchView('viewLobby');
+
+        document.getElementById('lobbyQuizTitle').textContent = data.title;
+        document.getElementById('lobbyQuizMeta').textContent =
+          `${questions.length} Questions • ${data.timerSeconds}s Timer • ${data.markingMode === 'upsc' ? 'UPSC Negative Marking (+200 / -66)' : 'No Negative Marking (+200 / 0)'}`;
+        document.getElementById('lobbyRoomCode').textContent = data.roomCode;
+        document.getElementById('lobbyPlayerCount').textContent = playersList.length;
+
+        const grid = document.getElementById('lobbyPlayersGrid');
+        grid.innerHTML = playersList.map(p => `
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border ${p.id === myUserId ? 'border-amber-400/60' : 'border-slate-800'} flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl ${p.isHost ? 'bg-amber-500/20 text-amber-400' : 'bg-emerald-500/20 text-emerald-400'} flex items-center justify-center font-bold text-sm">
+                ${p.name.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white flex items-center gap-1.5">
+                  <span>${escapeHtml(p.name)}</span>
+                  ${p.id === myUserId ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-amber-300">You</span>' : ''}
+                </div>
+                <div class="text-[10px] text-slate-500 font-mono">${p.id}</div>
+              </div>
+            </div>
+            ${p.isHost ? '<span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">Host</span>' : '<span class="w-2 h-2 rounded-full bg-emerald-400"></span>'}
+          </div>
+        `).join('');
+
+        document.getElementById('hostStartContainer').classList.toggle('hidden', !isHost);
+        document.getElementById('guestWaitingContainer').classList.toggle('hidden', isHost);
+        lastRenderedQuestionIdx = -1;
+        lastRenderedStatus = 'waiting';
+        return;
+      }
+
+      // 2. PLAYING OR REVEALED STATE
+      if (data.status === 'playing' || data.status === 'revealed') {
+        switchView('viewQuiz');
+        const qIdx = data.currentQuestionIndex || 0;
+        const currentQ = questions[qIdx];
+        if (!currentQ) return;
+
+        document.getElementById('quizQBadge').textContent = `Q ${qIdx + 1} / ${questions.length}`;
+        document.getElementById('quizRoomCode').textContent = data.roomCode;
+
+        const answeredCount = playersList.filter(p => p.currentAnswer !== null && p.currentAnswer !== undefined).length;
+        document.getElementById('quizAnsweredCounter').textContent =
+          `${answeredCount} / ${playersList.length} खिलाड़ियों ने उत्तर लॉक किया`;
+
+        const me = playersObj[myUserId] || { currentAnswer: null };
+        const myAns = me.currentAnswer;
+
+        // Re-render question & options if question index or status changed
+        if (lastRenderedQuestionIdx !== qIdx || lastRenderedStatus !== data.status) {
+          lastRenderedQuestionIdx = qIdx;
+          lastRenderedStatus = data.status;
+          startSynchronizedTimer(data);
+        }
+
+        renderQuestionAndOptions(currentQ, myAns, data.status === 'revealed');
+        renderLiveLeaderboard(playersList, data.status === 'revealed', currentQ.correctIndex);
+
+        // Host controls
+        document.getElementById('hostForceControls').classList.toggle('hidden', !(isHost && data.status === 'playing'));
+
+        // Auto-reveal check for Host when all connected players have locked in their answer
+        if (isHost && data.status === 'playing' && answeredCount === playersList.length && playersList.length > 0) {
+          hostRevealAnswer();
+        }
+        return;
+      }
+
+      // 3. FINISHED PODIUM STATE
+      if (data.status === 'finished') {
+        clearInterval(localTimerInterval);
+        switchView('viewResults');
+        renderFinalPodium(data, playersList, questions);
+        lastRenderedStatus = 'finished';
+      }
+    }
+
+    function renderQuestionAndOptions(q, myAns, isRevealed) {
+      document.getElementById('questionText').textContent = q.question;
+      const container = document.getElementById('optionsContainer');
+      const labels = ['A', 'B', 'C', 'D'];
+
+      container.innerHTML = q.options.map((optText, idx) => {
+        let btnStyle = 'bg-slate-900/90 border-slate-700/80 text-slate-200 hover:bg-slate-800/90';
+        let badgeStyle = 'bg-slate-800 text-slate-300 border-slate-700';
+        let iconHtml = '';
+
+        if (!isRevealed) {
+          if (myAns === idx) {
+            btnStyle = 'bg-amber-500/20 border-amber-400 text-white ring-2 ring-amber-400/30';
+            badgeStyle = 'bg-amber-400 text-slate-950 border-amber-300 font-extrabold';
+            iconHtml = '<span class="text-xs font-bold text-amber-300 flex items-center gap-1"><i class="fa-solid fa-lock"></i> Locked</span>';
+          }
+        } else {
+          // Revealed state styling
+          if (idx === q.correctIndex) {
+            btnStyle = 'bg-emerald-500/20 border-emerald-400 text-emerald-100 ring-2 ring-emerald-400/30';
+            badgeStyle = 'bg-emerald-400 text-slate-950 font-extrabold';
+            iconHtml = '<span class="text-xs font-bold text-emerald-400 flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> सही उत्तर</span>';
+          } else if (myAns === idx && idx !== q.correctIndex) {
+            btnStyle = 'bg-rose-500/20 border-rose-400 text-rose-200';
+            badgeStyle = 'bg-rose-500 text-white font-extrabold';
+            iconHtml = '<span class="text-xs font-bold text-rose-400 flex items-center gap-1"><i class="fa-solid fa-circle-xmark"></i> आपका उत्तर</span>';
+          } else {
+            btnStyle = 'bg-slate-900/40 border-slate-800/60 text-slate-500 opacity-75';
+          }
+        }
+
+        const disabledAttr = (myAns !== null && myAns !== undefined) || isRevealed ? 'disabled' : '';
+
+        return `
+          <button ${disabledAttr} onclick="window.appActions.submitAnswer(${idx})"
+            class="option-btn w-full text-left p-4 rounded-xl border ${btnStyle} flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <span class="w-7 h-7 rounded-lg border ${badgeStyle} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                ${labels[idx]}
+              </span>
+              <span class="text-sm sm:text-base font-medium leading-snug">${escapeHtml(optText)}</span>
+            </div>
+            <div class="shrink-0">${iconHtml}</div>
+          </button>
+        `;
+      }).join('');
+
+      // Skip button & status text
+      const skipBtn = document.getElementById('btnSkipQuestion');
+      const feedback = document.getElementById('lockFeedbackText');
+      if (isRevealed) {
+        skipBtn.classList.add('hidden');
+        feedback.textContent = 'इस प्रश्न का समय समाप्त हो गया है। नीचे व्याख्या देखें।';
+      } else if (myAns !== null && myAns !== undefined) {
+        skipBtn.classList.add('hidden');
+        feedback.innerHTML = myAns === -1
+          ? '<span class="text-amber-300 font-semibold"><i class="fa-solid fa-forward mr-1"></i>आपने यह प्रश्न Skip किया है। बाकी दोस्तों की प्रतीक्षा...</span>'
+          : '<span class="text-emerald-400 font-semibold"><i class="fa-solid fa-lock mr-1"></i>आपका उत्तर लॉक हो चुका है! बाकी दोस्तों की प्रतीक्षा...</span>';
+      } else {
+        skipBtn.classList.remove('hidden');
+        feedback.textContent = 'किसी एक विकल्प पर क्लिक करके उत्तर लॉक करें।';
+      }
+
+      // Explanation Box
+      const expBox = document.getElementById('explanationBox');
+      if (isRevealed) {
+        expBox.classList.remove('hidden');
+        document.getElementById('explanationText').textContent = q.explanation || 'कोई अतिरिक्त व्याख्या उपलब्ध नहीं है।';
+
+        const badge = document.getElementById('roundOutcomeBadge');
+        if (myAns === q.correctIndex) {
+          badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+          badge.textContent = '🎉 सही उत्तर! (+Points)';
+        } else if (myAns === -1 || myAns === null || myAns === undefined) {
+          badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300';
+          badge.textContent = '⏭️ Skipped (0 Marks)';
+        } else {
+          badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40';
+          badge.textContent = roomData.markingMode === 'upsc' ? '❌ गलत उत्तर (-66 Negative Marking)' : '❌ गलत उत्तर (0 Marks)';
+        }
+
+        const nextBtn = document.getElementById('btnHostNextQ');
+        const nextHint = document.getElementById('nextStepHint');
+        if (isHost) {
+          nextBtn.classList.remove('hidden');
+          const questions = JSON.parse(roomData.questionsJson || '[]');
+          const isLast = (roomData.currentQuestionIndex + 1) >= questions.length;
+          nextBtn.innerHTML = isLast
+            ? '<span>अंतिम परिणाम देखें (View Final Podium)</span><i class="fa-solid fa-trophy"></i>'
+            : '<span>अगला प्रश्न (Next Question)</span><i class="fa-solid fa-arrow-right"></i>';
+          nextHint.textContent = 'आप Host हैं — जब सभी व्याख्या पढ़ लें, तो अगला प्रश्न शुरू करें।';
+        } else {
+          nextBtn.classList.add('hidden');
+          nextHint.textContent = 'Host जल्द ही अगला प्रश्न शुरू करेंगे...';
+        }
+      } else {
+        expBox.classList.add('hidden');
+      }
+    }
+
+    function renderLiveLeaderboard(playersList, isRevealed, correctIndex) {
+      const sorted = [...playersList].sort((a, b) => (b.score || 0) - (a.score || 0));
+      const listEl = document.getElementById('liveLeaderboardList');
+
+      listEl.innerHTML = sorted.map((p, idx) => {
+        const hasAnswered = p.currentAnswer !== null && p.currentAnswer !== undefined;
+        let statusPill = '';
+
+        if (!isRevealed) {
+          statusPill = hasAnswered
+            ? '<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"><i class="fa-solid fa-check mr-1"></i>Locked</span>'
+            : '<span class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Thinking...</span>';
+        } else {
+          if (p.currentAnswer === correctIndex) {
+            statusPill = '<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">+Correct</span>';
+          } else if (p.currentAnswer === -1 || !hasAnswered) {
+            statusPill = '<span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Skipped</span>';
+          } else {
+            statusPill = '<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300">Wrong</span>';
+          }
+        }
+
+        return `
+          <div class="p-3 rounded-xl bg-slate-900/90 border ${p.id === myUserId ? 'border-amber-400/50' : 'border-slate-800'} flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="w-6 h-6 rounded-lg ${idx === 0 ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-300'} font-extrabold text-xs flex items-center justify-center">
+                ${idx + 1}
+              </span>
+              <div>
+                <div class="text-xs font-bold text-white">${escapeHtml(p.name)}</div>
+                <div class="text-[11px] text-amber-400 font-mono font-bold">${p.score || 0} pts</div>
+              </div>
+            </div>
+            ${statusPill}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // =====================================================
+    // 7. TIMER & SCORING LOGIC
+    // =====================================================
+    function startSynchronizedTimer(data) {
+      clearInterval(localTimerInterval);
+      const timerEl = document.getElementById('timerSeconds');
+      const circleEl = document.getElementById('timerCircle');
+
+      if (data.status === 'revealed') {
+        timerEl.textContent = '0';
+        circleEl.className = 'w-14 h-14 rounded-2xl bg-slate-900 border-2 border-slate-700 flex flex-col items-center justify-center';
+        return;
+      }
+
+      const totalSec = data.timerSeconds || 30;
+      const startTime = data.questionStartTime || Date.now();
+
+      const tick = () => {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const remaining = Math.max(0, totalSec - elapsed);
+        timerEl.textContent = remaining;
+
+        if (remaining <= 7) {
+          circleEl.className = 'w-14 h-14 rounded-2xl bg-rose-950/60 border-2 border-rose-500 flex flex-col items-center justify-center animate-pulse';
+        } else {
+          circleEl.className = 'w-14 h-14 rounded-2xl bg-slate-900 border-2 border-amber-400 flex flex-col items-center justify-center';
+        }
+
+        if (remaining <= 0) {
+          clearInterval(localTimerInterval);
+          if (isHost && roomData && roomData.status === 'playing') {
+            hostRevealAnswer();
+          }
+        }
+      };
+
+      tick();
+      localTimerInterval = setInterval(tick, 500);
+    }
+
+    async function submitAnswer(optionIndex) {
+      if (!roomData || roomData.status !== 'playing') return;
+
+      if (syncEngine === 'peerjs' && !isHost && guestConnection) {
+        guestConnection.send({
+          type: 'SUBMIT_ANSWER',
+          playerId: myUserId,
+          optionIndex
+        });
+        return;
+      }
+
+      await applyPlayerAnswer(myUserId, optionIndex);
+    }
+
+    async function applyPlayerAnswer(playerId, optionIndex) {
+      const players = JSON.parse(roomData.playersJson || '{}');
+      const player = players[playerId];
+      if (!player) return;
+      if (player.currentAnswer !== null && player.currentAnswer !== undefined) return; // Already locked
+
+      const questions = JSON.parse(roomData.questionsJson || '[]');
+      const currentQ = questions[roomData.currentQuestionIndex || 0];
+      if (!currentQ) return;
+
+      const elapsedSec = Math.max(0, Math.floor((Date.now() - (roomData.questionStartTime || Date.now())) / 1000));
+      const remainingSec = Math.max(0, (roomData.timerSeconds || 30) - elapsedSec);
+      const speedBonus = Math.round((remainingSec / (roomData.timerSeconds || 30)) * 50);
+
+      player.currentAnswer = optionIndex;
+      player.answeredAt = Date.now();
+
+      if (optionIndex === -1) {
+        player.skippedCount = (player.skippedCount || 0) + 1;
+      } else if (optionIndex === currentQ.correctIndex) {
+        player.correctCount = (player.correctCount || 0) + 1;
+        player.score = (player.score || 0) + 200 + speedBonus;
+      } else {
+        player.wrongCount = (player.wrongCount || 0) + 1;
+        if (roomData.markingMode === 'upsc') {
+          player.score = (player.score || 0) - 66;
+        }
+      }
+
+      await pushRoomUpdate({
+        playersJson: JSON.stringify(players)
+      });
+    }
+
+    async function hostStartQuiz() {
+      if (!isHost || !roomData) return;
+      const players = JSON.parse(roomData.playersJson || '{}');
+      Object.values(players).forEach(p => {
+        p.score = 0;
+        p.correctCount = 0;
+        p.wrongCount = 0;
+        p.skippedCount = 0;
+        p.currentAnswer = null;
+      });
+
+      await pushRoomUpdate({
+        status: 'playing',
+        currentQuestionIndex: 0,
+        questionStartTime: Date.now(),
+        playersJson: JSON.stringify(players)
+      });
+    }
+
+    async function hostRevealAnswer() {
+      if (!isHost || !roomData || roomData.status !== 'playing') return;
+      const players = JSON.parse(roomData.playersJson || '{}');
+      Object.values(players).forEach(p => {
+        if (p.currentAnswer === null || p.currentAnswer === undefined) {
+          p.currentAnswer = -1;
+          p.skippedCount = (p.skippedCount || 0) + 1;
+        }
+      });
+
+      await pushRoomUpdate({
+        status: 'revealed',
+        playersJson: JSON.stringify(players)
+      });
+    }
+
+    async function hostNextQuestion() {
+      if (!isHost || !roomData) return;
+      const questions = JSON.parse(roomData.questionsJson || '[]');
+      const nextIdx = (roomData.currentQuestionIndex || 0) + 1;
+
+      if (nextIdx >= questions.length) {
+        await pushRoomUpdate({ status: 'finished' });
+        return;
+      }
+
+      const players = JSON.parse(roomData.playersJson || '{}');
+      Object.values(players).forEach(p => {
+        p.currentAnswer = null;
+        p.answeredAt = null;
+      });
+
+      await pushRoomUpdate({
+        status: 'playing',
+        currentQuestionIndex: nextIdx,
+        questionStartTime: Date.now(),
+        playersJson: JSON.stringify(players)
+      });
+    }
+
+    async function hostResetLobby() {
+      if (!isHost || !roomData) return;
+      const players = JSON.parse(roomData.playersJson || '{}');
+      Object.values(players).forEach(p => {
+        p.score = 0;
+        p.correctCount = 0;
+        p.wrongCount = 0;
+        p.skippedCount = 0;
+        p.currentAnswer = null;
+      });
+      await pushRoomUpdate({
+        status: 'waiting',
+        currentQuestionIndex: 0,
+        playersJson: JSON.stringify(players)
+      });
+    }
+
+    // =====================================================
+    // 8. FINAL PODIUM & COMPLETE QUESTION REVIEW
+    // =====================================================
+    function renderFinalPodium(data, playersList, questions) {
+      document.getElementById('finalQuizTitle').textContent = data.title;
+      const sorted = [...playersList].sort((a, b) => (b.score || 0) - (a.score || 0));
+
+      const medals = [
+        { label: '1st Place 🥇', border: 'border-amber-400', bg: 'bg-amber-500/15', text: 'text-amber-300' },
+        { label: '2nd Place 🥈', border: 'border-slate-400', bg: 'bg-slate-400/10', text: 'text-slate-200' },
+        { label: '3rd Place 🥉', border: 'border-orange-500', bg: 'bg-orange-500/10', text: 'text-orange-300' }
+      ];
+
+      const podiumEl = document.getElementById('podiumContainer');
+      podiumEl.innerHTML = sorted.slice(0, 3).map((p, idx) => {
+        const m = medals[idx];
+        const totalAttempted = (p.correctCount || 0) + (p.wrongCount || 0);
+        const acc = totalAttempted > 0 ? Math.round(((p.correctCount || 0) / totalAttempted) * 100) : 0;
+        return `
+          <div class="p-5 rounded-2xl border-2 ${m.border} ${m.bg} flex flex-col items-center text-center space-y-2">
+            <span class="text-xs font-extrabold uppercase tracking-wider ${m.text}">${m.label}</span>
+            <div class="text-lg font-extrabold text-white">${escapeHtml(p.name)}</div>
+            <div class="font-mono text-2xl font-black text-amber-400">${p.score || 0} <span class="text-xs font-normal text-slate-400">pts</span></div>
+            <div class="text-[11px] text-slate-300">
+              ✅ ${p.correctCount || 0} सही • ❌ ${p.wrongCount || 0} गलत • 🎯 ${acc}% Accuracy
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const tableEl = document.getElementById('finalLeaderboardList');
+      tableEl.innerHTML = sorted.map((p, idx) => `
+        <div class="px-4 py-3 flex items-center justify-between text-xs sm:text-sm">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-slate-800 text-amber-300 font-bold text-xs flex items-center justify-center">${idx + 1}</span>
+            <span class="font-bold text-white">${escapeHtml(p.name)}</span>
+          </div>
+          <div class="flex items-center gap-4 font-mono text-xs">
+            <span class="text-emerald-400">✔ ${p.correctCount || 0}</span>
+            <span class="text-rose-400">✖ ${p.wrongCount || 0}</span>
+            <span class="text-slate-400">⏭ ${p.skippedCount || 0}</span>
+            <span class="font-extrabold text-amber-300 text-sm">${p.score || 0} pts</span>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('btnHostPlayAgain').classList.toggle('hidden', !isHost);
+
+      // Populate full question review
+      const reviewList = document.getElementById('fullReviewList');
+      const labels = ['A', 'B', 'C', 'D'];
+      reviewList.innerHTML = questions.map((q, i) => `
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+          <div class="text-xs font-bold text-amber-400">प्रश्न ${i + 1}</div>
+          <div class="text-sm font-semibold text-white whitespace-pre-line">${escapeHtml(q.question)}</div>
+          <div class="text-xs text-emerald-300 font-bold pt-1">
+            ✔ सही उत्तर (${labels[q.correctIndex]}): ${escapeHtml(q.options[q.correctIndex])}
+          </div>
+          <div class="text-xs text-slate-300 bg-slate-950/70 p-3 rounded-lg border border-slate-800/80 leading-relaxed">
+            <strong>व्याख्या:</strong> ${escapeHtml(q.explanation || '')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // =====================================================
+    // 9. CUSTOM QUIZ BUILDER & SHARE ACTIONS
+    // =====================================================
+    function handlePackChange() {
+      const val = document.getElementById('quizPackSelect').value;
+      const box = document.getElementById('customQuizBox');
+      if (val === 'custom_json') {
+        box.classList.remove('hidden');
+        if (!document.getElementById('customJsonInput').value.trim()) {
+          loadSampleCustomJson();
+        }
+      } else {
+        box.classList.add('hidden');
+      }
+    }
+
+    function loadSampleCustomJson() {
+      const sample = [
+        {
+          question: "भारत में पहली बार 'आयकर' (Income Tax) 1860 ई. में किसके द्वारा प्रस्तुत किया गया था?",
+          options: ["लॉर्ड कॉर्नवालिस", "जेम्स विल्सन (James Wilson)", "थॉमस मुनरो", "लॉर्ड डलहौजी"],
+          correctIndex: 1,
+          explanation: "1857 के विद्रोह के बाद हुए वित्तीय घाटे की भरपाई के लिए 1860 में जेम्स विल्सन ने भारत का पहला बजट और आयकर (Income Tax) प्रस्तुत किया था।"
+        }
+      ];
+      document.getElementById('customJsonInput').value = JSON.stringify(sample, null, 2);
+      document.getElementById('customCountLabel').textContent = `कुल कस्टम प्रश्न: 1`;
+    }
+
+    function addCustomQuestionFromForm() {
+      const q = document.getElementById('cqText').value.trim();
+      const o0 = document.getElementById('cqOpt0').value.trim();
+      const o1 = document.getElementById('cqOpt1').value.trim();
+      const o2 = document.getElementById('cqOpt2').value.trim();
+      const o3 = document.getElementById('cqOpt3').value.trim();
+      const correctIndex = parseInt(document.getElementById('cqCorrect').value, 10);
+      const exp = document.getElementById('cqExp').value.trim();
+
+      if (!q || !o0 || !o1 || !o2 || !o3) {
+        showToast('कृपया प्रश्न और चारों विकल्प (A, B, C, D) भरें!', 'error');
+        return;
+      }
+
+      let list = [];
+      try {
+        list = JSON.parse(document.getElementById('customJsonInput').value || '[]');
+      } catch (e) {
+        list = [];
+      }
+
+      list.push({
+        question: q,
+        options: [o0, o1, o2, o3],
+        correctIndex,
+        explanation: exp || 'सही उत्तर।'
+      });
+
+      document.getElementById('customJsonInput').value = JSON.stringify(list, null, 2);
+      document.getElementById('customCountLabel').textContent = `कुल कस्टम प्रश्न: ${list.length}`;
+
+      // Clear inputs
+      ['cqText', 'cqOpt0', 'cqOpt1', 'cqOpt2', 'cqOpt3', 'cqExp'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      showToast(`प्रश्न जोड़ा गया! (कुल प्रश्न: ${list.length})`, 'success');
+    }
+
+    function copyRoomCode() {
+      if (!currentRoomCode) return;
+      const temp = document.createElement('textarea');
+      temp.value = currentRoomCode;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      temp.remove();
+      showToast(`Room Code ${currentRoomCode} कॉपी हो गया!`, 'success');
+    }
+
+    function shareOnWhatsApp() {
+      if (!currentRoomCode) return;
+      const title = roomData ? roomData.title : 'UPSC Live Quiz';
+      const url = window.location.href;
+      const text = `🔥 *Sankalp Live UPSC/CAPF Quiz* में मेरे साथ जुड़ो!\n📚 Topic: *${title}*\n🔑 *6-Digit Room Code:* ${currentRoomCode}\n👉 Join Link: ${url}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // Expose actions to window for inline handlers
+    window.appActions = {
+      createRoom: () => createRoom(false),
+      startSoloPractice: () => createRoom(true),
+      joinRoom,
+      hostStartQuiz,
+      hostRevealAnswer,
+      hostNextQuestion,
+      hostResetLobby,
+      submitAnswer,
+      handlePackChange,
+      loadSampleCustomJson,
+      addCustomQuestionFromForm,
+      copyRoomCode,
+      shareOnWhatsApp,
+      toggleReviewList: () => {
+        document.getElementById('fullReviewContainer').classList.toggle('hidden');
+      },
+      confirmLeaveToHome: () => {
+        clearInterval(localTimerInterval);
+        if (roomUnsubscribe) roomUnsubscribe();
+        roomUnsubscribe = null;
+        currentRoomCode = null;
+        roomData = null;
+        switchView('viewHome');
+      },
+      openModal: (id) => document.getElementById(id).classList.remove('hidden'),
+      closeModal: (id) => document.getElementById(id).classList.add('hidden')
+    };
+
+    window.addEventListener('DOMContentLoaded', initAppEngine);
+  </script>
+</body>
+</html>
