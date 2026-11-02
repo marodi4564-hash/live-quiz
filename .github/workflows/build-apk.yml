@@ -12,32 +12,30 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Setup Node.js & Capacitor
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
-      - name: Initialize Android Wrapper
+      - name: Build Web Assets & Capacitor Project
         run: |
           npm init -y
-          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install --save @capacitor/core @capacitor/cli @capacitor/android
           npx cap init "Sankalp Live" "com.sankalp.livequiz" --web-dir "."
+          rm -rf android
           npx cap add android
-          npx cap copy android
+          npx cap sync android
 
       - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
