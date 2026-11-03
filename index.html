@@ -728,12 +728,79 @@
       return val;
     }
 
-    async function getSelectedQuestions() {
-      const packKey = document.getElementById('quizPackSelect').value;
-      if (packKey === 'ai_live_capf') {
-        showToast('ऑनलाइन AI से UPSC CAPF के नए सवाल फेच हो रहे हैं...', 'info');
-        return await fetchOnlineCAPFQuestions();
+    async function normalizeQuestionBank() {
+  try {
+    const response = await fetch('./questionbank.json');
+
+    if (!response.ok) {
+      throw new Error('questionbank.json load nahi hui');
+    }
+
+    const bank = await response.json();
+
+    if (!Array.isArray(bank.questions) || bank.questions.length === 0) {
+      throw new Error('JSON me questions nahi mile');
+    }
+
+    const questions = bank.questions.map((item) => {
+      const sourceOptions = Array.isArray(item.options) ? item.options : [];
+
+      const options = sourceOptions.map((option) =>
+        option?.text?.hi || option?.text?.en || ''
+      );
+
+      const correctIndex = sourceOptions.findIndex(
+        (option) => option?.id === item.correct_option
+      );
+
+      if (!item.question || correctIndex < 0 || options.length === 0) {
+        throw new Error('Question bank me kisi question ka format galat hai');
       }
+
+      return {
+        question: item.question.hi || item.question.en || '',
+        options,
+        correctIndex,
+        explanation: item.explanation?.hi || item.explanation?.en || ''
+      };
+    });
+
+    return {
+      title: bank.title || 'Question Bank Quiz',
+      questions
+    };
+  } catch (error) {
+    console.error('Question bank load failed:', error);
+    showToast('questionbank.json load nahi hui. File aur JSON format check karein.', 'error');
+    return null;
+  }
+}
+
+async function getSelectedQuestions() {
+  const packKey = document.getElementById('quizPackSelect').value;
+
+  if (packKey === 'questionbank_json') {
+    return await normalizeQuestionBank();
+  }
+
+  if (packKey === 'ai_live_capf') {
+    showToast('ऑनलाइन AI से UPSC CAPF के नए सवाल फेच हो रहे हैं...', 'info');
+    return await fetchOnlineCAPFQuestions();
+  }
+
+  if (packKey === 'custom_json') {
+    try {
+      const raw = document.getElementById('customJsonInput').value.trim();
+      const parsed = JSON.parse(raw);
+      return { title: 'Custom UPSC Live Quiz', questions: parsed };
+    } catch (error) {
+      showToast('कस्टम JSON ठीक नहीं है!', 'error');
+      return null;
+    }
+  }
+
+  return QUIZ_PACKS[packKey];
+}
       if (packKey === 'custom_json') {
         try {
           const raw = document.getElementById('customJsonInput').value.trim();
