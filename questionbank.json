@@ -1,0 +1,5071 @@
+{
+  "title": "UPSC CAPF AC Paper I - Bilingual GK Practice Set",
+  "version": "1.0",
+  "language": [
+    "Hindi",
+    "English"
+  ],
+  "total_questions": 54,
+  "verified_authentic_pyq_count": 0,
+  "practice_question_count": 54,
+  "note": "This is an initial practice batch. These questions are not represented as verbatim UPSC previous-year questions. Authentic PYQs require extraction and verification against official UPSC question-paper PDFs and answer keys.",
+  "official_source": "https://www.upsc.gov.in/examinations/previous-question-papers",
+  "questions": [
+    {
+      "id": "CAPF-PRACTICE-001",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारत के संविधान का अनुच्छेद 32 किससे संबंधित है?",
+        "en": "Which Article of the Indian Constitution deals with the Right to Constitutional Remedies?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "समानता का अधिकार",
+            "en": "Right to Equality"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "संवैधानिक उपचारों का अधिकार",
+            "en": "Right to Constitutional Remedies"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "धर्म की स्वतंत्रता",
+            "en": "Freedom of Religion"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "शिक्षा का अधिकार",
+            "en": "Right to Education"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "डॉ. आंबेडकर ने अनुच्छेद 32 को संविधान की आत्मा कहा था। यह मौलिक अधिकारों के प्रवर्तन हेतु सर्वोच्च न्यायालय जाने का अधिकार देता है।",
+        "en": "Article 32 allows a person to move the Supreme Court for enforcement of Fundamental Rights."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-002",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "मौलिक कर्तव्यों को संविधान में किस संशोधन द्वारा जोड़ा गया?",
+        "en": "Which Constitutional Amendment added Fundamental Duties?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "42वाँ",
+            "en": "42nd"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "44वाँ",
+            "en": "44th"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "52वाँ",
+            "en": "52nd"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "61वाँ",
+            "en": "61st"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा भाग IVA में मौलिक कर्तव्य जोड़े गए।",
+        "en": "The 42nd Amendment Act, 1976 added Fundamental Duties in Part IVA."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-003",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारत के राष्ट्रपति का चुनाव किसके द्वारा किया जाता है?",
+        "en": "Who elects the President of India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "केवल लोकसभा",
+            "en": "Lok Sabha only"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "निर्वाचित सांसद और निर्वाचित विधायक",
+            "en": "Elected MPs and elected MLAs"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सभी सांसद और सभी विधायक",
+            "en": "All MPs and MLAs"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "जनता द्वारा प्रत्यक्ष चुनाव",
+            "en": "Direct popular vote"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "निर्वाचक मंडल में संसद के दोनों सदनों के निर्वाचित सदस्य तथा राज्यों और निर्दिष्ट केंद्रशासित प्रदेशों के निर्वाचित विधायक शामिल होते हैं।",
+        "en": "The electoral college consists of elected MPs and elected MLAs of states and specified Union Territories."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-004",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "धन विधेयक की परिभाषा किस अनुच्छेद में दी गई है?",
+        "en": "Which Article defines a Money Bill?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अनुच्छेद 108",
+            "en": "Article 108"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अनुच्छेद 110",
+            "en": "Article 110"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "अनुच्छेद 112",
+            "en": "Article 112"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "अनुच्छेद 123",
+            "en": "Article 123"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अनुच्छेद 110 धन विधेयक की परिभाषा देता है।",
+        "en": "Article 110 defines a Money Bill."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-005",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "राज्यसभा के कितने सदस्य प्रत्येक दो वर्ष में सेवानिवृत्त होते हैं?",
+        "en": "What fraction of Rajya Sabha members retire every two years?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "एक-चौथाई",
+            "en": "One-fourth"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "एक-तिहाई",
+            "en": "One-third"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "आधा",
+            "en": "One-half"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "दो-तिहाई",
+            "en": "Two-thirds"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "राज्यसभा स्थायी सदन है; लगभग एक-तिहाई सदस्य प्रत्येक दो वर्ष में सेवानिवृत्त होते हैं।",
+        "en": "Rajya Sabha is a permanent House; about one-third of its members retire every two years."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-006",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "1857 के विद्रोह की शुरुआत किस स्थान से हुई?",
+        "en": "Where did the Revolt of 1857 begin?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "दिल्ली",
+            "en": "Delhi"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "कानपुर",
+            "en": "Kanpur"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "मेरठ",
+            "en": "Meerut"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "झाँसी",
+            "en": "Jhansi"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "10 मई 1857 को मेरठ में सैनिक विद्रोह शुरू हुआ और फिर दिल्ली तक फैल गया।",
+        "en": "The sepoy uprising began at Meerut on 10 May 1857 and spread to Delhi."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-007",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "भारतीय राष्ट्रीय कांग्रेस की स्थापना किस वर्ष हुई?",
+        "en": "In which year was the Indian National Congress founded?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1885",
+            "en": "1885"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1887",
+            "en": "1887"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1905",
+            "en": "1905"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1911",
+            "en": "1911"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "भारतीय राष्ट्रीय कांग्रेस की स्थापना 1885 में हुई; प्रथम अधिवेशन बंबई में हुआ।",
+        "en": "The INC was founded in 1885; its first session was held in Bombay."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-008",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "स्थायी बंदोबस्त (Permanent Settlement) किसने लागू किया?",
+        "en": "Who introduced the Permanent Settlement?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "लॉर्ड वेलेजली",
+            "en": "Lord Wellesley"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "लॉर्ड कॉर्नवालिस",
+            "en": "Lord Cornwallis"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "लॉर्ड डलहौजी",
+            "en": "Lord Dalhousie"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "वॉरेन हेस्टिंग्स",
+            "en": "Warren Hastings"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "1793 में बंगाल में लॉर्ड कॉर्नवालिस ने स्थायी बंदोबस्त लागू किया।",
+        "en": "Lord Cornwallis introduced the Permanent Settlement in Bengal in 1793."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-009",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "अशोक के अधिकांश अभिलेख किस लिपि में हैं?",
+        "en": "Most of Ashoka's inscriptions are written in which script?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ब्राह्मी",
+            "en": "Brahmi"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "देवनागरी",
+            "en": "Devanagari"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "शारदा",
+            "en": "Sharada"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "ग्रंथ",
+            "en": "Grantha"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "अशोक के अधिकांश अभिलेख ब्राह्मी लिपि में हैं; उत्तर-पश्चिम में खरोष्ठी के उदाहरण भी मिलते हैं।",
+        "en": "Most Ashokan inscriptions use Brahmi; Kharosthi appears in the north-west."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-010",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "सिंधु सभ्यता का प्रसिद्ध गोदीवाड़ा (dockyard) कहाँ मिला है?",
+        "en": "Where was the famous dockyard of the Indus Valley Civilization found?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "हड़प्पा",
+            "en": "Harappa"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "मोहनजोदड़ो",
+            "en": "Mohenjo-daro"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "लोथल",
+            "en": "Lothal"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कालीबंगा",
+            "en": "Kalibangan"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "गुजरात के लोथल में ईंटों से बना गोदीवाड़ा-सदृश संरचना मिली है।",
+        "en": "A dockyard-like brick structure was discovered at Lothal in Gujarat."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-011",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत से होकर कौन-सी अक्षांश रेखा गुजरती है?",
+        "en": "Which latitude passes through India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "भूमध्य रेखा",
+            "en": "Equator"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "कर्क रेखा",
+            "en": "Tropic of Cancer"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "मकर रेखा",
+            "en": "Tropic of Capricorn"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "आर्कटिक वृत्त",
+            "en": "Arctic Circle"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "कर्क रेखा भारत के मध्य भाग से गुजरती है और आठ राज्यों से होकर जाती है।",
+        "en": "The Tropic of Cancer crosses central India and passes through eight states."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-012",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत की सबसे लंबी नदी, जो पूरी तरह भारत में बहती है, कौन-सी है?",
+        "en": "Which is the longest river flowing entirely within India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "गंगा",
+            "en": "Ganga"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "गोदावरी",
+            "en": "Godavari"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "ब्रह्मपुत्र",
+            "en": "Brahmaputra"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "सिंधु",
+            "en": "Indus"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "गोदावरी लगभग 1,465 किमी लंबी है और इसे दक्षिण गंगा भी कहा जाता है।",
+        "en": "The Godavari is about 1,465 km long and is often called the Dakshin Ganga."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-013",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "काली मिट्टी मुख्यतः किस फसल के लिए उपयुक्त मानी जाती है?",
+        "en": "Black soil is especially suitable for which crop?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "चाय",
+            "en": "Tea"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "कपास",
+            "en": "Cotton"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "जूट",
+            "en": "Jute"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "नारियल",
+            "en": "Coconut"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "काली मिट्टी में नमी धारण क्षमता अधिक होती है और यह कपास के लिए अनुकूल है।",
+        "en": "Black soil retains moisture well and is particularly suitable for cotton."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-014",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "पश्चिमी घाट और पूर्वी घाट कहाँ मिलते हैं?",
+        "en": "Where do the Western and Eastern Ghats meet?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अरावली",
+            "en": "Aravalli"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "नीलगिरि",
+            "en": "Nilgiri"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सतपुड़ा",
+            "en": "Satpura"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "विंध्य",
+            "en": "Vindhya"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "नीलगिरि पहाड़ियों के क्षेत्र में पश्चिमी और पूर्वी घाट मिलते हैं।",
+        "en": "The Western and Eastern Ghats meet in the Nilgiri Hills region."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-015",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत में दक्षिण-पश्चिम मानसून सामान्यतः सबसे पहले किस राज्य में प्रवेश करता है?",
+        "en": "The southwest monsoon generally first enters which Indian state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "तमिलनाडु",
+            "en": "Tamil Nadu"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "केरल",
+            "en": "Kerala"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "ओडिशा",
+            "en": "Odisha"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "गुजरात",
+            "en": "Gujarat"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "दक्षिण-पश्चिम मानसून सामान्यतः जून के आरंभ में केरल तट पर पहुँचता है।",
+        "en": "The southwest monsoon usually reaches the Kerala coast in early June."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-016",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारतीय रिजर्व बैंक की स्थापना किस वर्ष हुई?",
+        "en": "In which year was the Reserve Bank of India established?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1930",
+            "en": "1930"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1935",
+            "en": "1935"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1947",
+            "en": "1947"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1950",
+            "en": "1950"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "RBI की स्थापना 1 अप्रैल 1935 को RBI Act, 1934 के तहत हुई।",
+        "en": "The RBI began operations on 1 April 1935 under the RBI Act, 1934."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-017",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "GDP का अर्थ क्या है?",
+        "en": "What does GDP stand for?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "सकल घरेलू उत्पाद",
+            "en": "Gross Domestic Product"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "शुद्ध राष्ट्रीय उत्पाद",
+            "en": "Net National Product"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सकल राष्ट्रीय बचत",
+            "en": "Gross National Savings"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "उपभोक्ता मूल्य सूचकांक",
+            "en": "Consumer Price Index"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "GDP एक निश्चित अवधि में देश की घरेलू सीमा के भीतर उत्पादित अंतिम वस्तुओं और सेवाओं का बाजार मूल्य है।",
+        "en": "GDP is the market value of final goods and services produced within a country's domestic territory in a period."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-018",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "मुद्रास्फीति का सामान्य अर्थ क्या है?",
+        "en": "What is the general meaning of inflation?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "कीमतों के सामान्य स्तर में वृद्धि",
+            "en": "Rise in general price level"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "बेरोजगारी में कमी",
+            "en": "Fall in unemployment"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "उत्पादन में गिरावट",
+            "en": "Fall in production"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "निर्यात में वृद्धि",
+            "en": "Rise in exports"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "मुद्रास्फीति का अर्थ अर्थव्यवस्था में वस्तुओं और सेवाओं के सामान्य मूल्य स्तर में निरंतर वृद्धि है।",
+        "en": "Inflation is a sustained rise in the general price level of goods and services."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-019",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारत में मौद्रिक नीति समिति (MPC) में कुल कितने सदस्य होते हैं?",
+        "en": "How many members are there in India's Monetary Policy Committee (MPC)?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "4",
+            "en": "4"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "5",
+            "en": "5"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "6",
+            "en": "6"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "7",
+            "en": "7"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "MPC में छह सदस्य होते हैं—तीन RBI से और तीन केंद्र सरकार द्वारा नियुक्त।",
+        "en": "The MPC has six members: three from the RBI and three appointed by the Central Government."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-020",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "मानव रक्त का सामान्य pH लगभग कितना होता है?",
+        "en": "What is the approximate normal pH of human blood?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "6.2",
+            "en": "6.2"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "7.4",
+            "en": "7.4"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "8.2",
+            "en": "8.2"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "5.5",
+            "en": "5.5"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "मानव रक्त थोड़ा क्षारीय होता है; सामान्य pH लगभग 7.35–7.45 है।",
+        "en": "Human blood is slightly alkaline, with a normal pH around 7.35–7.45."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-021",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "विटामिन C की कमी से कौन-सा रोग होता है?",
+        "en": "Deficiency of Vitamin C causes which disease?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "रिकेट्स",
+            "en": "Rickets"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "स्कर्वी",
+            "en": "Scurvy"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "बेरी-बेरी",
+            "en": "Beriberi"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "रतौंधी",
+            "en": "Night blindness"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "विटामिन C की कमी से स्कर्वी होता है, जिसमें मसूड़ों से रक्तस्राव हो सकता है।",
+        "en": "Vitamin C deficiency causes scurvy, which can include bleeding gums."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-022",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "विद्युत धारा की SI इकाई क्या है?",
+        "en": "What is the SI unit of electric current?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "वोल्ट",
+            "en": "Volt"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "ओम",
+            "en": "Ohm"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "एम्पियर",
+            "en": "Ampere"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "वाट",
+            "en": "Watt"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "विद्युत धारा की SI इकाई एम्पियर है।",
+        "en": "The SI unit of electric current is the ampere."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-023",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "प्रकाश संश्लेषण में पौधे मुख्यतः कौन-सी गैस ग्रहण करते हैं?",
+        "en": "Which gas do plants primarily absorb during photosynthesis?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ऑक्सीजन",
+            "en": "Oxygen"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "नाइट्रोजन",
+            "en": "Nitrogen"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "कार्बन डाइऑक्साइड",
+            "en": "Carbon dioxide"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "हाइड्रोजन",
+            "en": "Hydrogen"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "प्रकाश संश्लेषण में पौधे CO₂ और जल से कार्बोहाइड्रेट बनाते हैं तथा ऑक्सीजन छोड़ते हैं।",
+        "en": "Plants use carbon dioxide and water to make carbohydrates and release oxygen during photosynthesis."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-024",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "मानव शरीर में इंसुलिन किस अंग द्वारा स्रावित होता है?",
+        "en": "Which organ secretes insulin in the human body?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "यकृत",
+            "en": "Liver"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अग्न्याशय",
+            "en": "Pancreas"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गुर्दा",
+            "en": "Kidney"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "थायरॉयड",
+            "en": "Thyroid"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अग्न्याशय की लैंगरहैंस द्वीपिकाओं की बीटा कोशिकाएँ इंसुलिन स्रावित करती हैं।",
+        "en": "Beta cells in the pancreatic islets of Langerhans secrete insulin."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-025",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "ओजोन परत मुख्यतः वायुमंडल की किस परत में पाई जाती है?",
+        "en": "The ozone layer is mainly found in which atmospheric layer?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "क्षोभमंडल",
+            "en": "Troposphere"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "समतापमंडल",
+            "en": "Stratosphere"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "मध्यमंडल",
+            "en": "Mesosphere"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "तापमंडल",
+            "en": "Thermosphere"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "ओजोन की अधिकतम सांद्रता समतापमंडल में लगभग 15–35 किमी की ऊँचाई पर होती है।",
+        "en": "Most atmospheric ozone is concentrated in the stratosphere, roughly 15–35 km above Earth."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-026",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "रामसर संधि किससे संबंधित है?",
+        "en": "The Ramsar Convention is related to what?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "मरुस्थल",
+            "en": "Deserts"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "आर्द्रभूमि",
+            "en": "Wetlands"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "वन्यजीव व्यापार",
+            "en": "Wildlife trade"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "जलवायु परिवर्तन",
+            "en": "Climate change"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "रामसर संधि आर्द्रभूमियों के संरक्षण और विवेकपूर्ण उपयोग से संबंधित है।",
+        "en": "The Ramsar Convention concerns the conservation and wise use of wetlands."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-027",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "भारत का पहला राष्ट्रीय उद्यान कौन-सा था?",
+        "en": "Which was India's first national park?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "काजीरंगा",
+            "en": "Kaziranga"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "जिम कॉर्बेट",
+            "en": "Jim Corbett"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गिर",
+            "en": "Gir"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कान्हा",
+            "en": "Kanha"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "जिम कॉर्बेट राष्ट्रीय उद्यान 1936 में हैली नेशनल पार्क के रूप में स्थापित हुआ था।",
+        "en": "Jim Corbett National Park was established in 1936 as Hailey National Park."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-028",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "संयुक्त राष्ट्र संघ की स्थापना कब हुई?",
+        "en": "When was the United Nations established?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1919",
+            "en": "1919"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1945",
+            "en": "1945"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1948",
+            "en": "1948"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1955",
+            "en": "1955"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "संयुक्त राष्ट्र चार्टर 24 अक्टूबर 1945 को लागू हुआ; इसी दिन UN स्थापना दिवस मनाया जाता है।",
+        "en": "The UN Charter entered into force on 24 October 1945, the date observed as UN Day."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-029",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "अंतरराष्ट्रीय न्यायालय (ICJ) का मुख्यालय कहाँ है?",
+        "en": "Where is the headquarters of the International Court of Justice (ICJ)?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "जिनेवा",
+            "en": "Geneva"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "न्यूयॉर्क",
+            "en": "New York"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "हेग",
+            "en": "The Hague"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "पेरिस",
+            "en": "Paris"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "ICJ नीदरलैंड के हेग स्थित पीस पैलेस में है।",
+        "en": "The ICJ is based at the Peace Palace in The Hague, Netherlands."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-030",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारत का सर्वोच्च युद्धकालीन वीरता पुरस्कार कौन-सा है?",
+        "en": "What is India's highest wartime gallantry award?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अशोक चक्र",
+            "en": "Ashoka Chakra"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "परमवीर चक्र",
+            "en": "Param Vir Chakra"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "महावीर चक्र",
+            "en": "Maha Vir Chakra"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कीर्ति चक्र",
+            "en": "Kirti Chakra"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "परमवीर चक्र युद्धकाल में सर्वोच्च वीरता के लिए दिया जाता है।",
+        "en": "The Param Vir Chakra is India's highest award for wartime gallantry."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-031",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "राष्ट्रीय रक्षा अकादमी (NDA) कहाँ स्थित है?",
+        "en": "Where is the National Defence Academy (NDA) located?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "देहरादून",
+            "en": "Dehradun"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "खड़कवासला, पुणे",
+            "en": "Khadakwasla, Pune"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "चेन्नई",
+            "en": "Chennai"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "मऊ",
+            "en": "Mhow"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "NDA महाराष्ट्र में पुणे के निकट खड़कवासला में स्थित है।",
+        "en": "The NDA is located at Khadakwasla near Pune, Maharashtra."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-032",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "भरतनाट्यम किस राज्य का शास्त्रीय नृत्य है?",
+        "en": "Bharatanatyam is a classical dance form of which state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "केरल",
+            "en": "Kerala"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "तमिलनाडु",
+            "en": "Tamil Nadu"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "ओडिशा",
+            "en": "Odisha"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "असम",
+            "en": "Assam"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "भरतनाट्यम का उद्भव तमिलनाडु से जुड़ा है।",
+        "en": "Bharatanatyam is traditionally associated with Tamil Nadu."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-033",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "कोणार्क सूर्य मंदिर किस राज्य में स्थित है?",
+        "en": "In which state is the Konark Sun Temple located?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ओडिशा",
+            "en": "Odisha"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "बिहार",
+            "en": "Bihar"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "मध्य प्रदेश",
+            "en": "Madhya Pradesh"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "राजस्थान",
+            "en": "Rajasthan"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "कोणार्क सूर्य मंदिर ओडिशा में स्थित 13वीं शताब्दी का प्रसिद्ध मंदिर है।",
+        "en": "The Konark Sun Temple is a famous 13th-century temple in Odisha."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-034",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत का मानक समय किस देशांतर पर आधारित है?",
+        "en": "Indian Standard Time is based on which longitude?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "68°7′ E",
+            "en": "68°7′ E"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "82°30′ E",
+            "en": "82°30′ E"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "90° E",
+            "en": "90° E"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "75° E",
+            "en": "75° E"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "82°30′ पूर्व देशांतर को भारत की मानक मध्याह्न रेखा माना गया है।",
+        "en": "82°30′ E is the standard meridian for Indian Standard Time."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-035",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "संविधान सभा के स्थायी अध्यक्ष कौन थे?",
+        "en": "Who was the permanent President of the Constituent Assembly?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "डॉ. बी. आर. आंबेडकर",
+            "en": "Dr B. R. Ambedkar"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "डॉ. राजेंद्र प्रसाद",
+            "en": "Dr Rajendra Prasad"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "जवाहरलाल नेहरू",
+            "en": "Jawaharlal Nehru"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "सरदार पटेल",
+            "en": "Sardar Patel"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "डॉ. राजेंद्र प्रसाद संविधान सभा के स्थायी अध्यक्ष चुने गए थे।",
+        "en": "Dr Rajendra Prasad was elected the permanent President of the Constituent Assembly."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-036",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "दांडी मार्च किस वर्ष हुआ था?",
+        "en": "In which year did the Dandi March take place?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1920",
+            "en": "1920"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1930",
+            "en": "1930"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1932",
+            "en": "1932"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1942",
+            "en": "1942"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "महात्मा गांधी ने 12 मार्च 1930 को साबरमती से दांडी मार्च शुरू किया।",
+        "en": "Mahatma Gandhi began the Dandi March from Sabarmati on 12 March 1930."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-037",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारत में GST कब लागू हुआ?",
+        "en": "When was GST implemented in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1 जनवरी 2016",
+            "en": "1 जनवरी 2016"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1 जुलाई 2017",
+            "en": "1 जुलाई 2017"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1 अप्रैल 2018",
+            "en": "1 अप्रैल 2018"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1 जनवरी 2019",
+            "en": "1 जनवरी 2019"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "वस्तु एवं सेवा कर 1 जुलाई 2017 से लागू हुआ।",
+        "en": "Goods and Services Tax came into effect on 1 July 2017."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-038",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "ध्वनि किस माध्यम में संचरित नहीं हो सकती?",
+        "en": "In which medium can sound not travel?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ठोस",
+            "en": "Solid"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "द्रव",
+            "en": "Liquid"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गैस",
+            "en": "Gas"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "निर्वात",
+            "en": "Vacuum"
+          }
+        }
+      ],
+      "correct_option": "D",
+      "explanation": {
+        "hi": "ध्वनि यांत्रिक तरंग है और संचरण के लिए माध्यम आवश्यक है।",
+        "en": "Sound is a mechanical wave and requires a medium to travel."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-039",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "जैव विविधता का सबसे बड़ा स्थलीय हॉटस्पॉट भारत के किस क्षेत्र से जुड़ा है?",
+        "en": "Which Indian region is associated with a major terrestrial biodiversity hotspot?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "पश्चिमी घाट",
+            "en": "Western Ghats"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "थार मरुस्थल",
+            "en": "Thar Desert"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गंगा का मैदान",
+            "en": "Gangetic Plain"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "दक्कन का पठार",
+            "en": "Deccan Plateau"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "पश्चिमी घाट वैश्विक जैव विविधता हॉटस्पॉट का हिस्सा हैं।",
+        "en": "The Western Ghats form part of a globally recognized biodiversity hotspot."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-040",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "WHO का मुख्यालय कहाँ है?",
+        "en": "Where is the headquarters of WHO?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "रोम",
+            "en": "Rome"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "जिनेवा",
+            "en": "Geneva"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "वियना",
+            "en": "Vienna"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "नैरोबी",
+            "en": "Nairobi"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "विश्व स्वास्थ्य संगठन का मुख्यालय जिनेवा, स्विट्जरलैंड में है।",
+        "en": "The World Health Organization is headquartered in Geneva, Switzerland."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-041",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारतीय सशस्त्र बलों का सर्वोच्च कमांडर कौन होता है?",
+        "en": "Who is the Supreme Commander of the Indian Armed Forces?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "प्रधानमंत्री",
+            "en": "Prime Minister"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "रक्षा मंत्री",
+            "en": "Defence Minister"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "राष्ट्रपति",
+            "en": "President"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "सेना प्रमुख",
+            "en": "Chief of Army Staff"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "संविधान के अनुच्छेद 53 के तहत संघ की कार्यपालिका शक्ति राष्ट्रपति में निहित है; राष्ट्रपति सशस्त्र बलों के सर्वोच्च कमांडर हैं।",
+        "en": "The President is the Supreme Commander of the Indian Armed Forces."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-042",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारत के नियंत्रक एवं महालेखा परीक्षक (CAG) की नियुक्ति कौन करता है?",
+        "en": "Who appoints the Comptroller and Auditor General of India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "प्रधानमंत्री",
+            "en": "Prime Minister"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "राष्ट्रपति",
+            "en": "President"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "लोकसभा अध्यक्ष",
+            "en": "Speaker of Lok Sabha"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "वित्त मंत्री",
+            "en": "Finance Minister"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अनुच्छेद 148 के अनुसार CAG की नियुक्ति राष्ट्रपति करते हैं।",
+        "en": "Under Article 148, the President appoints the CAG."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-043",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "'स्वराज मेरा जन्मसिद्ध अधिकार है' किसने कहा था?",
+        "en": "Who said, 'Swaraj is my birthright and I shall have it'?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "महात्मा गांधी",
+            "en": "Mahatma Gandhi"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "बाल गंगाधर तिलक",
+            "en": "Bal Gangadhar Tilak"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "लाला लाजपत राय",
+            "en": "Lala Lajpat Rai"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "बिपिन चंद्र पाल",
+            "en": "Bipin Chandra Pal"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "यह प्रसिद्ध नारा लोकमान्य बाल गंगाधर तिलक से जुड़ा है।",
+        "en": "The famous slogan is associated with Lokmanya Bal Gangadhar Tilak."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-044",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "विश्व का सबसे बड़ा महासागर कौन-सा है?",
+        "en": "Which is the largest ocean in the world?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अटलांटिक",
+            "en": "Atlantic"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "हिंद",
+            "en": "Indian"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "प्रशांत",
+            "en": "Pacific"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "आर्कटिक",
+            "en": "Arctic"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "प्रशांत महासागर क्षेत्रफल और आयतन दोनों में सबसे बड़ा महासागर है।",
+        "en": "The Pacific is the largest ocean by area and volume."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-045",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "ओम का नियम किस संबंध को व्यक्त करता है?",
+        "en": "What relationship does Ohm's law express?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "V = IR",
+            "en": "V = IR"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "P = VI",
+            "en": "P = VI"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "F = ma",
+            "en": "F = ma"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "E = mc²",
+            "en": "E = mc²"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "स्थिर तापमान पर चालक के सिरों के बीच विभवांतर धारा के समानुपाती होता है: V = IR।",
+        "en": "At constant temperature, voltage across a conductor is proportional to current: V = IR."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-046",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "रेपो दर का संबंध किससे है?",
+        "en": "The repo rate is associated with what?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "RBI द्वारा बैंकों को अल्पकालिक ऋण",
+            "en": "Short-term lending by RBI to banks"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "बैंकों द्वारा ग्राहकों को जमा ब्याज",
+            "en": "Deposit interest paid by banks"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सरकार का आयकर",
+            "en": "Government income tax"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "विदेशी मुद्रा भंडार",
+            "en": "Foreign exchange reserves"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "रेपो दर वह दर है जिस पर RBI पात्र प्रतिभूतियों के बदले बैंकों को अल्पकालिक धन उपलब्ध कराता है।",
+        "en": "The repo rate is the rate at which the RBI lends short-term funds to banks against eligible securities."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-047",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "सांची स्तूप किस राज्य में स्थित है?",
+        "en": "Sanchi Stupa is located in which state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "उत्तर प्रदेश",
+            "en": "Uttar Pradesh"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "मध्य प्रदेश",
+            "en": "Madhya Pradesh"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "बिहार",
+            "en": "Bihar"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "महाराष्ट्र",
+            "en": "Maharashtra"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "सांची स्तूप मध्य प्रदेश के रायसेन जिले में स्थित है।",
+        "en": "The Sanchi Stupa is located in Raisen district of Madhya Pradesh."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-048",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "प्रोजेक्ट टाइगर भारत में कब शुरू किया गया?",
+        "en": "When was Project Tiger launched in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1969",
+            "en": "1969"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1973",
+            "en": "1973"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1980",
+            "en": "1980"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1986",
+            "en": "1986"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "प्रोजेक्ट टाइगर 1973 में बाघ संरक्षण के उद्देश्य से शुरू किया गया।",
+        "en": "Project Tiger was launched in 1973 to support tiger conservation."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-049",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारतीय संविधान में आपातकालीन प्रावधान किस भाग में हैं?",
+        "en": "Emergency provisions are contained in which Part of the Indian Constitution?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "भाग XIV",
+            "en": "Part XIV"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "भाग XVI",
+            "en": "Part XVI"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "भाग XVIII",
+            "en": "Part XVIII"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "भाग XX",
+            "en": "Part XX"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "राष्ट्रीय, राज्य और वित्तीय आपातकाल से संबंधित प्रावधान भाग XVIII में हैं।",
+        "en": "Provisions relating to national, state and financial emergencies are in Part XVIII."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-050",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "'भारत छोड़ो आंदोलन' किस वर्ष शुरू हुआ?",
+        "en": "In which year was the Quit India Movement launched?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1935",
+            "en": "1935"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1939",
+            "en": "1939"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1942",
+            "en": "1942"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1946",
+            "en": "1946"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "अखिल भारतीय कांग्रेस समिति ने 8 अगस्त 1942 को भारत छोड़ो प्रस्ताव पारित किया।",
+        "en": "The Quit India resolution was adopted on 8 August 1942."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-051",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "चिल्का झील किस राज्य में है?",
+        "en": "Chilika Lake is located in which state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "आंध्र प्रदेश",
+            "en": "Andhra Pradesh"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "ओडिशा",
+            "en": "Odisha"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "पश्चिम बंगाल",
+            "en": "West Bengal"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "केरल",
+            "en": "Kerala"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "चिल्का ओडिशा की खारे-मीठे पानी की लैगून झील है।",
+        "en": "Chilika is a brackish-water lagoon in Odisha."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-052",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "DNA की डबल हेलिक्स संरचना का मॉडल किसने प्रस्तुत किया?",
+        "en": "Who proposed the double-helix model of DNA?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "डार्विन और वॉलेस",
+            "en": "Darwin and Wallace"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "वॉटसन और क्रिक",
+            "en": "Watson and Crick"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "मेंडल और मॉर्गन",
+            "en": "Mendel and Morgan"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "पाश्चर और कोच",
+            "en": "Pasteur and Koch"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "1953 में जेम्स वॉटसन और फ्रांसिस क्रिक ने DNA की डबल हेलिक्स संरचना का मॉडल प्रस्तुत किया।",
+        "en": "James Watson and Francis Crick proposed the DNA double-helix model in 1953."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-053",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "SAARC की स्थापना किस वर्ष हुई?",
+        "en": "In which year was SAARC established?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1980",
+            "en": "1980"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1985",
+            "en": "1985"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1991",
+            "en": "1991"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1995",
+            "en": "1995"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "दक्षिण एशियाई क्षेत्रीय सहयोग संगठन की स्थापना 1985 में ढाका में हुई।",
+        "en": "SAARC was established in Dhaka in 1985."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-054",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारतीय तटरक्षक बल की स्थापना किस वर्ष हुई?",
+        "en": "In which year was the Indian Coast Guard established?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1971",
+            "en": "1971"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1977",
+            "en": "1977"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1982",
+            "en": "1982"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1985",
+            "en": "1985"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "भारतीय तटरक्षक बल की स्थापना 1 फरवरी 1977 को हुई।",
+        "en": "The Indian Coast Guard was established on 1 February 1977."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    }
+  ]
+}
+
+{
+  "title": "UPSC CAPF AC Paper I - Bilingual GK Practice Set, Batch 2",
+  "version": "1.0",
+  "language": [
+    "Hindi",
+    "English"
+  ],
+  "total_questions": 51,
+  "verified_authentic_pyq_count": 0,
+  "practice_question_count": 51,
+  "note": "All entries in this batch are original practice questions, not verbatim UPSC PYQs. Verify official PYQs against UPSC papers and answer keys.",
+  "official_source": "https://www.upsc.gov.in/examinations/previous-question-papers",
+  "questions": [
+    {
+      "id": "CAPF-PRACTICE-055",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "संविधान की प्रस्तावना में 'समाजवादी' और 'पंथनिरपेक्ष' शब्द किस संशोधन से जोड़े गए?",
+        "en": "Which amendment added the words 'Socialist' and 'Secular' to the Preamble?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "24वाँ",
+            "en": "24th"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "42वाँ",
+            "en": "42nd"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "44वाँ",
+            "en": "44th"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "52वाँ",
+            "en": "52nd"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "42वें संशोधन अधिनियम, 1976 ने प्रस्तावना में ये शब्द जोड़े।",
+        "en": "The 42nd Amendment Act, 1976 added these words to the Preamble."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-056",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "लोकसभा का सामान्य कार्यकाल कितना होता है?",
+        "en": "What is the normal term of the Lok Sabha?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "4 वर्ष",
+            "en": "4 years"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "5 वर्ष",
+            "en": "5 years"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "6 वर्ष",
+            "en": "6 years"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "स्थायी",
+            "en": "Permanent"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "लोकसभा का सामान्य कार्यकाल पहली बैठक से पाँच वर्ष है, जब तक पहले भंग न हो।",
+        "en": "The Lok Sabha normally continues for five years from its first meeting unless dissolved earlier."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-057",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "राज्य के नीति-निदेशक तत्व संविधान के किस भाग में हैं?",
+        "en": "In which Part of the Constitution are the Directive Principles of State Policy found?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "भाग III",
+            "en": "Part III"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "भाग IV",
+            "en": "Part IV"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "भाग IVA",
+            "en": "Part IVA"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "भाग V",
+            "en": "Part V"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "नीति-निदेशक तत्व भाग IV, अनुच्छेद 36 से 51 में हैं।",
+        "en": "The Directive Principles are in Part IV, Articles 36–51."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-058",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारत में निर्वाचन आयोग का उल्लेख किस अनुच्छेद में है?",
+        "en": "Which Article provides for the Election Commission of India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अनुच्छेद 280",
+            "en": "Article 280"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अनुच्छेद 324",
+            "en": "Article 324"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "अनुच्छेद 356",
+            "en": "Article 356"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "अनुच्छेद 368",
+            "en": "Article 368"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अनुच्छेद 324 चुनावों के अधीक्षण, निर्देशन और नियंत्रण की शक्ति निर्वाचन आयोग को देता है।",
+        "en": "Article 324 vests the superintendence, direction and control of elections in the Election Commission."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-059",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "संविधान संशोधन की प्रक्रिया मुख्यतः किस अनुच्छेद में दी गई है?",
+        "en": "Which Article primarily lays down the procedure for constitutional amendment?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अनुच्छेद 352",
+            "en": "Article 352"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अनुच्छेद 356",
+            "en": "Article 356"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "अनुच्छेद 368",
+            "en": "Article 368"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "अनुच्छेद 370",
+            "en": "Article 370"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "अनुच्छेद 368 संविधान संशोधन की संसद की शक्ति और प्रक्रिया बताता है।",
+        "en": "Article 368 provides Parliament's power and procedure to amend the Constitution."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-060",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "किस गवर्नर-जनरल के समय सती प्रथा पर प्रतिबंध लगाया गया?",
+        "en": "During whose tenure was the practice of sati prohibited?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "लॉर्ड रिपन",
+            "en": "Lord Ripon"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "लॉर्ड विलियम बेंटिंक",
+            "en": "Lord William Bentinck"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "लॉर्ड कर्जन",
+            "en": "Lord Curzon"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "लॉर्ड कैनिंग",
+            "en": "Lord Canning"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "1829 में लॉर्ड विलियम बेंटिंक ने बंगाल प्रेसीडेंसी में सती प्रथा पर प्रतिबंध लगाया।",
+        "en": "Lord William Bentinck prohibited sati in the Bengal Presidency in 1829."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-061",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "प्लासी का युद्ध किस वर्ष लड़ा गया?",
+        "en": "In which year was the Battle of Plassey fought?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1757",
+            "en": "1757"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1764",
+            "en": "1764"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1773",
+            "en": "1773"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1799",
+            "en": "1799"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "प्लासी का युद्ध 23 जून 1757 को सिराजुद्दौला और ईस्ट इंडिया कंपनी के बीच हुआ।",
+        "en": "The Battle of Plassey was fought on 23 June 1757 between Siraj-ud-Daulah and the East India Company."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-062",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "बक्सर का युद्ध किस वर्ष हुआ?",
+        "en": "In which year was the Battle of Buxar fought?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1757",
+            "en": "1757"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1764",
+            "en": "1764"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1765",
+            "en": "1765"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1772",
+            "en": "1772"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "बक्सर का युद्ध 1764 में ईस्ट इंडिया कंपनी और मीर कासिम, शुजाउद्दौला तथा शाह आलम द्वितीय की संयुक्त सेना के बीच हुआ।",
+        "en": "The Battle of Buxar was fought in 1764 between the Company and the combined forces of Mir Qasim, Shuja-ud-Daula and Shah Alam II."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-063",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "आर्य समाज की स्थापना किसने की?",
+        "en": "Who founded the Arya Samaj?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "राजा राममोहन राय",
+            "en": "Raja Ram Mohan Roy"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "स्वामी दयानंद सरस्वती",
+            "en": "Swami Dayanand Saraswati"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "स्वामी विवेकानंद",
+            "en": "Swami Vivekananda"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "ईश्वरचंद्र विद्यासागर",
+            "en": "Ishwar Chandra Vidyasagar"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "स्वामी दयानंद सरस्वती ने 1875 में बंबई में आर्य समाज की स्थापना की।",
+        "en": "Swami Dayanand Saraswati founded the Arya Samaj in Bombay in 1875."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-064",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "गदर पार्टी की स्थापना 1913 में कहाँ हुई?",
+        "en": "Where was the Ghadar Party founded in 1913?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "लंदन",
+            "en": "London"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "सैन फ्रांसिस्को",
+            "en": "San Francisco"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "टोक्यो",
+            "en": "Tokyo"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "लाहौर",
+            "en": "Lahore"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "गदर पार्टी की स्थापना 1913 में सैन फ्रांसिस्को में हुई थी।",
+        "en": "The Ghadar Party was founded in San Francisco in 1913."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-065",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत का सबसे बड़ा राज्य क्षेत्रफल की दृष्टि से कौन-सा है?",
+        "en": "Which is India's largest state by area?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "मध्य प्रदेश",
+            "en": "Madhya Pradesh"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "महाराष्ट्र",
+            "en": "Maharashtra"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "राजस्थान",
+            "en": "Rajasthan"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "उत्तर प्रदेश",
+            "en": "Uttar Pradesh"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "राजस्थान क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा राज्य है।",
+        "en": "Rajasthan is India's largest state by area."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-066",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत की सबसे ऊँची पर्वत चोटी जो पूरी तरह भारत में स्थित है, कौन-सी है?",
+        "en": "Which is the highest mountain peak located entirely within India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "K2",
+            "en": "K2"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "कंचनजंघा",
+            "en": "Kanchenjunga"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "नंदा देवी",
+            "en": "Nanda Devi"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कामेत",
+            "en": "Kamet"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "नंदा देवी उत्तराखंड में स्थित भारत की सबसे ऊँची चोटी है जो पूरी तरह भारत में है।",
+        "en": "Nanda Devi in Uttarakhand is the highest peak located entirely within India."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-067",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "नर्मदा नदी किस दिशा में बहती है?",
+        "en": "In which direction does the Narmada River flow?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "पूर्व से पश्चिम",
+            "en": "East to west"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "पश्चिम से पूर्व",
+            "en": "West to east"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "उत्तर से दक्षिण",
+            "en": "North to south"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "दक्षिण से उत्तर",
+            "en": "South to north"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "नर्मदा नदी मध्य भारत से होकर पश्चिम की ओर बहती है और अरब सागर में गिरती है।",
+        "en": "The Narmada flows westward through central India and drains into the Arabian Sea."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-068",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत में सबसे अधिक वर्षा वाला स्थान सामान्यतः किसे माना जाता है?",
+        "en": "Which place is generally regarded as the wettest in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "चेरापूंजी",
+            "en": "Cherrapunji"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "मासिनराम",
+            "en": "Mawsynram"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "शिलांग",
+            "en": "Shillong"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "अगरतला",
+            "en": "Agartala"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "मेघालय का मासिनराम औसत वार्षिक वर्षा के आधार पर अत्यधिक वर्षा वाला स्थान है।",
+        "en": "Mawsynram in Meghalaya is noted for exceptionally high average annual rainfall."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-069",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "कौन-सी नदी भ्रंश घाटी से होकर बहती है?",
+        "en": "Which river flows through a rift valley?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "गोदावरी",
+            "en": "Godavari"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "नर्मदा",
+            "en": "Narmada"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "महानदी",
+            "en": "Mahanadi"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कावेरी",
+            "en": "Kaveri"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "नर्मदा नदी विंध्य और सतपुड़ा श्रेणियों के बीच भ्रंश घाटी से बहती है।",
+        "en": "The Narmada flows through a rift valley between the Vindhya and Satpura ranges."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-070",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारत में योजना आयोग के स्थान पर नीति आयोग कब बना?",
+        "en": "When did NITI Aayog replace the Planning Commission in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "2012",
+            "en": "2012"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "2014",
+            "en": "2014"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "2015",
+            "en": "2015"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "2017",
+            "en": "2017"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "नीति आयोग 1 जनवरी 2015 को स्थापित किया गया।",
+        "en": "NITI Aayog was established on 1 January 2015."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-071",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारत में राष्ट्रीय आय का आधिकारिक अनुमान कौन जारी करता है?",
+        "en": "Which agency releases official estimates of national income in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "RBI",
+            "en": "RBI"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "राष्ट्रीय सांख्यिकी कार्यालय",
+            "en": "National Statistical Office"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "वित्त आयोग",
+            "en": "Finance Commission"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "नीति आयोग",
+            "en": "NITI Aayog"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "राष्ट्रीय सांख्यिकी कार्यालय (NSO), सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय के अंतर्गत अनुमान जारी करता है।",
+        "en": "The National Statistical Office under MoSPI releases national income estimates."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-072",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "वित्त आयोग का गठन किस अनुच्छेद के अंतर्गत होता है?",
+        "en": "Under which Article is the Finance Commission constituted?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अनुच्छेद 263",
+            "en": "Article 263"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अनुच्छेद 280",
+            "en": "Article 280"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "अनुच्छेद 300",
+            "en": "Article 300"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "अनुच्छेद 324",
+            "en": "Article 324"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अनुच्छेद 280 राष्ट्रपति को प्रत्येक पाँच वर्ष या उससे पहले वित्त आयोग गठित करने का प्रावधान देता है।",
+        "en": "Article 280 provides for the President to constitute a Finance Commission every five years or earlier."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-073",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "राजकोषीय घाटा किसके बराबर होता है?",
+        "en": "Fiscal deficit is equal to what?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "कुल व्यय − (राजस्व प्राप्तियाँ + गैर-ऋण पूंजीगत प्राप्तियाँ)",
+            "en": "Total expenditure minus revenue receipts and non-debt capital receipts"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "राजस्व व्यय − राजस्व प्राप्तियाँ",
+            "en": "Revenue expenditure minus revenue receipts"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "कुल कर − कुल व्यय",
+            "en": "Total taxes minus total expenditure"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "निर्यात − आयात",
+            "en": "Exports minus imports"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "राजकोषीय घाटा सरकार की कुल उधारी आवश्यकता का संकेतक है।",
+        "en": "Fiscal deficit indicates the government's total borrowing requirement."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-074",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "मानव शरीर की सबसे बड़ी ग्रंथि कौन-सी है?",
+        "en": "What is the largest gland in the human body?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "अग्न्याशय",
+            "en": "Pancreas"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "यकृत",
+            "en": "Liver"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "थायरॉयड",
+            "en": "Thyroid"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "पीयूष ग्रंथि",
+            "en": "Pituitary"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "यकृत मानव शरीर की सबसे बड़ी ग्रंथि है।",
+        "en": "The liver is the largest gland in the human body."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-075",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "लाल रक्त कणिकाओं का औसत जीवनकाल लगभग कितना होता है?",
+        "en": "What is the approximate lifespan of a red blood cell?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "30 दिन",
+            "en": "30 days"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "60 दिन",
+            "en": "60 days"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "120 दिन",
+            "en": "120 days"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "200 दिन",
+            "en": "200 days"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "मानव RBC का औसत जीवनकाल लगभग 120 दिन होता है।",
+        "en": "The average lifespan of a human red blood cell is about 120 days."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-076",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "पृथ्वी के वायुमंडल में सर्वाधिक मात्रा में कौन-सी गैस है?",
+        "en": "Which gas is most abundant in Earth's atmosphere?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ऑक्सीजन",
+            "en": "Oxygen"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "नाइट्रोजन",
+            "en": "Nitrogen"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "कार्बन डाइऑक्साइड",
+            "en": "Carbon dioxide"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "आर्गन",
+            "en": "Argon"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "शुष्क वायु में नाइट्रोजन लगभग 78 प्रतिशत होती है।",
+        "en": "Nitrogen makes up about 78 percent of dry air."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-077",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "किस विटामिन का निर्माण त्वचा में सूर्य के प्रकाश की सहायता से होता है?",
+        "en": "Which vitamin is synthesized in the skin with the help of sunlight?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "विटामिन A",
+            "en": "Vitamin A"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "विटामिन B12",
+            "en": "Vitamin B12"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "विटामिन C",
+            "en": "Vitamin C"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "विटामिन D",
+            "en": "Vitamin D"
+          }
+        }
+      ],
+      "correct_option": "D",
+      "explanation": {
+        "hi": "UVB किरणें त्वचा में विटामिन D के निर्माण की प्रक्रिया शुरू करती हैं।",
+        "en": "UVB radiation initiates vitamin D synthesis in the skin."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-078",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "निकट दृष्टि दोष (Myopia) को ठीक करने के लिए कौन-सा लेंस उपयोग होता है?",
+        "en": "Which lens is used to correct myopia?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "उत्तल",
+            "en": "Convex"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "अवतल",
+            "en": "Concave"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "बेलनाकार",
+            "en": "Cylindrical"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "द्विफोकसी",
+            "en": "Bifocal"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "अवतल लेंस प्रकाश किरणों को अपसारित करके प्रतिबिंब को रेटिना पर केंद्रित करने में मदद करता है।",
+        "en": "A concave lens diverges incoming rays so the image is focused on the retina."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-079",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "बल की SI इकाई क्या है?",
+        "en": "What is the SI unit of force?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "जूल",
+            "en": "Joule"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "न्यूटन",
+            "en": "Newton"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "पास्कल",
+            "en": "Pascal"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "वाट",
+            "en": "Watt"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "न्यूटन बल की SI इकाई है; 1 N = 1 kg·m/s²।",
+        "en": "The newton is the SI unit of force; 1 N = 1 kg·m/s²."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-080",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "किस गैस को प्रमुख मानवजनित ग्रीनहाउस गैस माना जाता है?",
+        "en": "Which gas is considered a major anthropogenic greenhouse gas?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ऑक्सीजन",
+            "en": "Oxygen"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "कार्बन डाइऑक्साइड",
+            "en": "Carbon dioxide"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "हीलियम",
+            "en": "Helium"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "हाइड्रोजन",
+            "en": "Hydrogen"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "जीवाश्म ईंधन के दहन और भूमि उपयोग परिवर्तन से CO₂ उत्सर्जन बढ़ता है।",
+        "en": "CO₂ emissions rise due to fossil-fuel combustion and land-use change."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-081",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "भारत में वन्यजीव संरक्षण अधिनियम किस वर्ष पारित हुआ?",
+        "en": "In which year was India's Wildlife (Protection) Act enacted?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1962",
+            "en": "1962"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1972",
+            "en": "1972"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1982",
+            "en": "1982"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "1992",
+            "en": "1992"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "वन्यजीव (संरक्षण) अधिनियम 1972 में पारित हुआ।",
+        "en": "The Wildlife (Protection) Act was enacted in 1972."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-082",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "जैवमंडल आरक्षित क्षेत्र (Biosphere Reserve) का मुख्य उद्देश्य क्या है?",
+        "en": "What is the primary purpose of a Biosphere Reserve?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "केवल पर्यटन",
+            "en": "Tourism only"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "जैव विविधता संरक्षण और सतत उपयोग",
+            "en": "Biodiversity conservation and sustainable use"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "केवल खनन",
+            "en": "Mining only"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "शहरी विस्तार",
+            "en": "Urban expansion"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "बायोस्फीयर रिजर्व संरक्षण, सतत विकास और लॉजिस्टिक समर्थन/अनुसंधान को जोड़ते हैं।",
+        "en": "Biosphere reserves combine conservation, sustainable development and support for research and monitoring."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-083",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "UNESCO का मुख्यालय कहाँ है?",
+        "en": "Where is UNESCO headquartered?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "पेरिस",
+            "en": "Paris"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "लंदन",
+            "en": "London"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "न्यूयॉर्क",
+            "en": "New York"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "जिनेवा",
+            "en": "Geneva"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "UNESCO का मुख्यालय पेरिस, फ्रांस में है।",
+        "en": "UNESCO is headquartered in Paris, France."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-084",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "विश्व व्यापार संगठन (WTO) की स्थापना कब हुई?",
+        "en": "When was the World Trade Organization established?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1985",
+            "en": "1985"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1991",
+            "en": "1991"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1995",
+            "en": "1995"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "2001",
+            "en": "2001"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "WTO 1 जनवरी 1995 को अस्तित्व में आया।",
+        "en": "The WTO came into existence on 1 January 1995."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-085",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारतीय वायु सेना दिवस कब मनाया जाता है?",
+        "en": "When is Indian Air Force Day observed?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "8 अक्टूबर",
+            "en": "8 October"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "15 जनवरी",
+            "en": "15 January"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "4 दिसंबर",
+            "en": "4 December"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "7 दिसंबर",
+            "en": "7 December"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "भारतीय वायु सेना दिवस 8 अक्टूबर को मनाया जाता है।",
+        "en": "Indian Air Force Day is observed on 8 October."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-086",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारतीय नौसेना दिवस कब मनाया जाता है?",
+        "en": "When is Indian Navy Day observed?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "8 अक्टूबर",
+            "en": "8 October"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "15 जनवरी",
+            "en": "15 January"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "4 दिसंबर",
+            "en": "4 December"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "26 जनवरी",
+            "en": "26 January"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "नौसेना दिवस 4 दिसंबर को 1971 के ऑपरेशन ट्राइडेंट की स्मृति में मनाया जाता है।",
+        "en": "Navy Day is observed on 4 December, commemorating Operation Trident in 1971."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-087",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "कथकली किस राज्य की नृत्य-नाट्य शैली है?",
+        "en": "Kathakali is a dance-drama tradition of which state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "कर्नाटक",
+            "en": "Karnataka"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "केरल",
+            "en": "Kerala"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "आंध्र प्रदेश",
+            "en": "Andhra Pradesh"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "मणिपुर",
+            "en": "Manipur"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "कथकली केरल की प्रसिद्ध शास्त्रीय नृत्य-नाट्य परंपरा है।",
+        "en": "Kathakali is a classical dance-drama tradition of Kerala."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-088",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "अजंता की गुफाएँ मुख्यतः किस धर्म से संबंधित चित्रकला के लिए प्रसिद्ध हैं?",
+        "en": "The Ajanta caves are especially famous for paintings associated with which religion?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "बौद्ध धर्म",
+            "en": "Buddhism"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "जैन धर्म",
+            "en": "Jainism"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सिख धर्म",
+            "en": "Sikhism"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "इस्लाम",
+            "en": "Islam"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "अजंता की गुफाओं में बौद्ध विषयों, जातक कथाओं और बुद्ध के जीवन से जुड़े भित्तिचित्र हैं।",
+        "en": "Ajanta's murals depict Buddhist themes, Jataka tales and episodes from the Buddha's life."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-089",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Art and Culture",
+      "question": {
+        "hi": "मधुबनी चित्रकला किस राज्य से संबंधित है?",
+        "en": "Madhubani painting is associated with which state?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "बिहार",
+            "en": "Bihar"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "राजस्थान",
+            "en": "Rajasthan"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गुजरात",
+            "en": "Gujarat"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "असम",
+            "en": "Assam"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "मधुबनी या मिथिला चित्रकला बिहार के मिथिला क्षेत्र की लोक कला है।",
+        "en": "Madhubani or Mithila painting is a folk art of the Mithila region in Bihar."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-090",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत का सबसे बड़ा डेल्टा कौन-सा है?",
+        "en": "Which is the largest delta associated with India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "महानदी डेल्टा",
+            "en": "Mahanadi Delta"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "गोदावरी डेल्टा",
+            "en": "Godavari Delta"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "सुंदरबन डेल्टा",
+            "en": "Sundarbans Delta"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कावेरी डेल्टा",
+            "en": "Kaveri Delta"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "गंगा-ब्रह्मपुत्र-मेघना प्रणाली का सुंदरबन डेल्टा विश्व का सबसे बड़ा डेल्टा है।",
+        "en": "The Sundarbans delta, formed by the Ganga-Brahmaputra-Meghna system, is the world's largest delta."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-091",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "लक्षद्वीप द्वीपसमूह किस प्रकार के द्वीपों से बना है?",
+        "en": "The Lakshadweep archipelago consists mainly of what type of islands?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ज्वालामुखीय",
+            "en": "Volcanic"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "प्रवाल",
+            "en": "Coral"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "नदीय",
+            "en": "Fluvial"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "महाद्वीपीय",
+            "en": "Continental"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "लक्षद्वीप मुख्यतः प्रवाल द्वीपों और एटॉल से बना है।",
+        "en": "Lakshadweep consists mainly of coral islands and atolls."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-092",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Geography",
+      "question": {
+        "hi": "भारत की सबसे लंबी तटरेखा वाला राज्य कौन-सा है?",
+        "en": "Which Indian state has the longest coastline?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "तमिलनाडु",
+            "en": "Tamil Nadu"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "आंध्र प्रदेश",
+            "en": "Andhra Pradesh"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "गुजरात",
+            "en": "Gujarat"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "केरल",
+            "en": "Kerala"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "गुजरात की तटरेखा राज्यों में सबसे लंबी है।",
+        "en": "Gujarat has the longest coastline among Indian states."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-093",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "भारत में पंचायती राज संस्थाओं को संवैधानिक दर्जा किस संशोधन से मिला?",
+        "en": "Which amendment gave constitutional status to Panchayati Raj institutions?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "42वाँ",
+            "en": "42nd"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "73वाँ",
+            "en": "73rd"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "74वाँ",
+            "en": "74th"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "86वाँ",
+            "en": "86th"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "73वें संशोधन अधिनियम, 1992 ने पंचायतों को संवैधानिक दर्जा दिया।",
+        "en": "The 73rd Amendment Act, 1992 gave constitutional status to Panchayats."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-094",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Polity",
+      "question": {
+        "hi": "नगरपालिकाओं को संवैधानिक दर्जा किस संशोधन से मिला?",
+        "en": "Which amendment gave constitutional status to municipalities?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "72वाँ",
+            "en": "72nd"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "73वाँ",
+            "en": "73rd"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "74वाँ",
+            "en": "74th"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "75वाँ",
+            "en": "75th"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "74वें संशोधन अधिनियम, 1992 ने शहरी स्थानीय निकायों से संबंधित भाग IXA जोड़ा।",
+        "en": "The 74th Amendment Act, 1992 added Part IXA on urban local bodies."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-095",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "जलियांवाला बाग हत्याकांड किस तिथि को हुआ?",
+        "en": "On which date did the Jallianwala Bagh massacre take place?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "13 अप्रैल 1919",
+            "en": "13 April 1919"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "15 अगस्त 1919",
+            "en": "15 August 1919"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "26 जनवरी 1920",
+            "en": "26 January 1920"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "9 अगस्त 1942",
+            "en": "9 August 1942"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "13 अप्रैल 1919 को अमृतसर के जलियांवाला बाग में जनरल डायर के आदेश पर गोलीबारी हुई।",
+        "en": "Firing took place at Jallianwala Bagh in Amritsar on 13 April 1919, on General Dyer's orders."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-096",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "होमरूल आंदोलन से भारत में कौन प्रमुख रूप से जुड़े थे?",
+        "en": "Who were prominent Indian leaders associated with the Home Rule Movement?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "तिलक और एनी बेसेंट",
+            "en": "Tilak and Annie Besant"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "गांधी और पटेल",
+            "en": "Gandhi and Patel"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "नेहरू और बोस",
+            "en": "Nehru and Bose"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "गोखले और दादाभाई",
+            "en": "Gokhale and Dadabhai"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "बाल गंगाधर तिलक और एनी बेसेंट ने 1916 में अलग-अलग होमरूल लीगों का नेतृत्व किया।",
+        "en": "Bal Gangadhar Tilak and Annie Besant led separate Home Rule Leagues in 1916."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-097",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "History",
+      "question": {
+        "hi": "भारत में विधवा पुनर्विवाह के समर्थन में प्रमुख सुधारक कौन थे?",
+        "en": "Which major reformer advocated widow remarriage in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "ईश्वरचंद्र विद्यासागर",
+            "en": "Ishwar Chandra Vidyasagar"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "दयानंद सरस्वती",
+            "en": "Dayanand Saraswati"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "ज्योतिबा फुले",
+            "en": "Jyotiba Phule"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "केशवचंद्र सेन",
+            "en": "Keshab Chandra Sen"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "ईश्वरचंद्र विद्यासागर के प्रयासों से 1856 का हिंदू विधवा पुनर्विवाह अधिनियम पारित हुआ।",
+        "en": "Ishwar Chandra Vidyasagar's efforts helped secure the Hindu Widows' Remarriage Act of 1856."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-098",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "भारत में बैंक नोट जारी करने का प्रमुख अधिकार किसके पास है?",
+        "en": "Who has the primary authority to issue banknotes in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "वित्त मंत्रालय",
+            "en": "Ministry of Finance"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "भारतीय रिजर्व बैंक",
+            "en": "Reserve Bank of India"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "SBI",
+            "en": "SBI"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "नीति आयोग",
+            "en": "NITI Aayog"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "RBI अधिनियम के अनुसार RBI को बैंक नोट जारी करने का अधिकार है, एक रुपये के नोट को छोड़कर।",
+        "en": "Under the RBI Act, the RBI has the right to issue banknotes, except the one-rupee note."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-099",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Economy",
+      "question": {
+        "hi": "प्रत्यक्ष कर का उदाहरण कौन-सा है?",
+        "en": "Which is an example of a direct tax?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "GST",
+            "en": "GST"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "सीमा शुल्क",
+            "en": "Customs duty"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "आयकर",
+            "en": "Income tax"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "उत्पाद शुल्क",
+            "en": "Excise duty"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "आयकर सीधे करदाता की आय पर लगाया जाता है; इसका भार सामान्यतः दूसरे पर स्थानांतरित नहीं किया जाता।",
+        "en": "Income tax is levied directly on a taxpayer's income and is generally not shifted to another person."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-100",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "मानव हृदय में कितने कक्ष होते हैं?",
+        "en": "How many chambers does the human heart have?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "2",
+            "en": "2"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "3",
+            "en": "3"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "4",
+            "en": "4"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "5",
+            "en": "5"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "मानव हृदय में दो आलिंद और दो निलय, कुल चार कक्ष होते हैं।",
+        "en": "The human heart has four chambers: two atria and two ventricles."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-101",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "पानी का रासायनिक सूत्र क्या है?",
+        "en": "What is the chemical formula of water?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "H₂O",
+            "en": "H₂O"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "CO₂",
+            "en": "CO₂"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "O₂",
+            "en": "O₂"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "H₂O₂",
+            "en": "H₂O₂"
+          }
+        }
+      ],
+      "correct_option": "A",
+      "explanation": {
+        "hi": "जल के प्रत्येक अणु में दो हाइड्रोजन और एक ऑक्सीजन परमाणु होता है।",
+        "en": "Each water molecule contains two hydrogen atoms and one oxygen atom."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-102",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Science",
+      "question": {
+        "hi": "विद्युत शक्ति की SI इकाई क्या है?",
+        "en": "What is the SI unit of electrical power?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "एम्पियर",
+            "en": "Ampere"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "वोल्ट",
+            "en": "Volt"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "वाट",
+            "en": "Watt"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "कूलॉम",
+            "en": "Coulomb"
+          }
+        }
+      ],
+      "correct_option": "C",
+      "explanation": {
+        "hi": "वाट शक्ति की SI इकाई है; शक्ति ऊर्जा के उपयोग या स्थानांतरण की दर है।",
+        "en": "The watt is the SI unit of power, the rate of energy transfer."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-103",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Environment",
+      "question": {
+        "hi": "प्रोजेक्ट एलीफेंट भारत में किस वर्ष शुरू हुआ?",
+        "en": "In which year was Project Elephant launched in India?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "1988",
+            "en": "1988"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "1992",
+            "en": "1992"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "1998",
+            "en": "1998"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "2002",
+            "en": "2002"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "प्रोजेक्ट एलीफेंट 1992 में हाथियों और उनके आवासों के संरक्षण के लिए शुरू हुआ।",
+        "en": "Project Elephant was launched in 1992 to protect elephants and their habitats."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-104",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "International Relations",
+      "question": {
+        "hi": "अंतरराष्ट्रीय मुद्रा कोष (IMF) का मुख्यालय कहाँ है?",
+        "en": "Where is the headquarters of the International Monetary Fund (IMF)?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "न्यूयॉर्क",
+            "en": "New York"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "वॉशिंगटन डी.सी.",
+            "en": "Washington, D.C."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "जिनेवा",
+            "en": "Geneva"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "लंदन",
+            "en": "London"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "IMF का मुख्यालय वॉशिंगटन डी.सी. में है।",
+        "en": "The IMF is headquartered in Washington, D.C."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    },
+    {
+      "id": "CAPF-PRACTICE-105",
+      "exam": "UPSC CAPF AC",
+      "paper": "Paper I - General Ability and Intelligence",
+      "year": null,
+      "subject": "Defence",
+      "question": {
+        "hi": "भारतीय थल सेना दिवस कब मनाया जाता है?",
+        "en": "When is Indian Army Day observed?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "hi": "8 अक्टूबर",
+            "en": "8 October"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "hi": "15 जनवरी",
+            "en": "15 January"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "hi": "4 दिसंबर",
+            "en": "4 December"
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "hi": "26 जुलाई",
+            "en": "26 July"
+          }
+        }
+      ],
+      "correct_option": "B",
+      "explanation": {
+        "hi": "15 जनवरी 1949 को जनरल के. एम. करियप्पा ने भारतीय सेना के पहले भारतीय कमांडर-इन-चीफ के रूप में पदभार संभाला; इस दिन सेना दिवस मनाया जाता है।",
+        "en": "Army Day is observed on 15 January, when K. M. Cariappa became the first Indian Commander-in-Chief in 1949."
+      },
+      "classification": "Practice",
+      "source_status": "Original practice question; not claimed as an official PYQ"
+    }
+  ]
+}
