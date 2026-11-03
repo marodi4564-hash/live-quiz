@@ -26,7 +26,12 @@ jobs:
         run: |
           npm init -y
           npm install --save @capacitor/core @capacitor/cli @capacitor/android
-          npx cap init "Sankalp Live" "com.sankalp.livequiz" --web-dir "."
+
+          mkdir -p www
+          cp index.html www/
+          if [ -f questions.json ]; then cp questions.json www/; fi
+
+          npx cap init "Sankalp Live" "com.sankalp.livequiz" --web-dir www
           rm -rf android
           npx cap add android
           npx cap sync android
